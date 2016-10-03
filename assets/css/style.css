@@ -1,0 +1,161 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:100,900|Open+Sans:400,700|Inconsolata';
+
+body {
+  margin: 0;
+  background: whitesmoke;
+  color: #333;
+  font-family: 'Open Sans', '.SFNSText-Regular', 'Segoe UI', 'Helvetica', 'Lucida Grande', 'Tahoma', 'Yu Gothic UI', 'Malgun Gothic', sans-serif;
+  font-size: 16px;
+}
+
+a:link, a:active, a:visited { color: #4078c0; text-decoration: none; }
+a:hover { text-decoration: underline }
+
+header#top {
+}
+
+header#top h1
+{
+  margin: 0 0 0 -4px;
+  font-family: 'Lato';
+  font-weight: 100;
+  font-size: 80px;
+}
+
+header#top p
+{
+  margin: 0;
+  font-weight: bold;
+}
+
+header#top a:link,
+header#top a:active,
+header#top a:visited,
+header#top a:hover
+{
+  color: #333;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1rem 0;
+}
+
+nav ul {
+  margin: 1.5rem 0 1rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li { display: inline-block; }
+
+nav ul li:before {
+  content: '|';
+  padding: 0 1em;
+}
+
+nav ul li:first-of-type:before {
+  content: '';
+  padding: 0;
+}
+
+hr {
+  margin: 1rem 0;
+  border: none;
+  height: 1px;
+  background: #ddd;
+}
+
+footer {
+  font-size: 0.75rem;
+  opacity: 0.5;
+}
+
+footer p { margin: 0.5rem 0; }
+
+code {
+  /*padding: 0.2rem 0.4rem;*/
+  font-family: 'Inconsolata';
+  color: #c04078;
+}
+
+pre code {
+  display: block;
+  box-sizing: border-box;
+  padding: 0.3rem 0.4rem;
+  border-left: 4px solid #ddd;
+  color: #333;
+  background: whitesmoke;
+}
+
+#wrapper {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 50px;
+  width: 900px;
+  min-height: 100vh;
+  background: white;
+}
+
+article > header
+{
+  margin: 1.5rem 0 2rem 0;
+}
+
+article header h1
+{
+  margin: 0.5rem 0;
+  font-family: 'Lato';
+  font-weight: 900;
+  font-size: 2.5em;
+}
+
+article header p {
+  margin: 0;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  opacity: 0.8;
+}
+
+a.tag {
+  padding: 0 5px;
+}
+
+article > div p,
+article > div ul,
+article > div ol {
+  line-height: 1.6em;
+}
+
+article > div > p > img {
+  box-sizing: border-box;
+  margin: 1em;
+  width: calc(100% - 2em);
+  border: 8px solid white;
+  border-radius: 3px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.3), 0 10px 20px rgba(0,0,0,0.2);
+}
+
+article.list > div > ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+article.list li.article h2 {
+  margin-bottom: 0.5rem;
+}
+
+article.list p.post-preview {
+  margin: 0.5em 0 1.5em 0;
+  opacity: 0.8;
+}
+
+p.post-date {
+  margin: 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+  opacity: 0.8;
+}

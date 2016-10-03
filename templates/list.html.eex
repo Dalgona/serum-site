@@ -1,0 +1,23 @@
+<article class="list">
+  <header><h1><%= @header %></h1></header>
+  <div>
+    <ul>
+      <%= for x <- @posts do %>
+        <li class="article">
+          <h2>
+            <a href="<%= x.url %>"><%= x.title %></a><br>
+          </h2>
+          <p class="post-date">
+            <%= x.date %>
+            <%= unless Enum.empty? x.tags do %> |
+              <%= for t <- x.tags do %>
+                <a class="tag" href="<%= t.list_url %>"><%= t.name %></a>
+              <% end %>
+            <% end %>
+          </p>
+          <p class="post-preview"><%= x.preview_text %></p></a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</article>
