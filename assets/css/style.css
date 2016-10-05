@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Lato:100,900|Open+Sans:400,700|Inconsolata';
+@import 'https://fonts.googleapis.com/css?family=Lato:100,900|Open+Sans:400,700|Inconsolata:400,700';
 
 body {
   margin: 0;
@@ -74,7 +74,6 @@ footer {
 footer p { margin: 0.5rem 0; }
 
 code {
-  /*padding: 0.2rem 0.4rem;*/
   font-family: 'Inconsolata';
   color: #c04078;
 }
@@ -86,6 +85,18 @@ pre code {
   border-left: 4px solid #ddd;
   color: #333;
   background: whitesmoke;
+}
+
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+  color: #333;
+  font-weight: bold;
+}
+
+a:link code,
+a:hover code,
+a:visited code,
+a:active code {
+  color: #4078c0;
 }
 
 #wrapper {
