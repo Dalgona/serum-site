@@ -48,7 +48,7 @@ Once you have successfully installed Serum, you can create and test your first w
 
 4. Open a web brower and navigate to your website. That's it!
 
-Congratulations! Yet it looks empty, you have successfully created and built your first website with Serum. Now continue reading [this document](%pages:docs/index) to customize your project and fill your website with your own contents.
+Congratulations! Yet it looks empty, you have successfully created and built your first website with Serum. Now continue reading [documentations](%pages:docs/index) to customize your project and fill your website with your own contents.
 
 <!--### Configuration
 
