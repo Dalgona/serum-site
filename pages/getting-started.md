@@ -4,14 +4,24 @@
 
 * Elixir 1.2 or newer
 
-    Please visit [the official Elixir website](elixir-lang.org) for installation instructions.
+    Please visit [the official Elixir website](elixir-lang.org) for
+    installation instructions.
 
 ### Obtaining the Source Code
 
-You can clone the Serum repository from [GitHub](https://github.com/Dalgona/Serum). Currently there are two branches which are considered to be suitable for daily use: `master` and `dev/autobuild`.
+You can clone the Serum repository from
+[GitHub](https://github.com/Dalgona/Serum). Currently there are two branches
+which are considered to be suitable for daily use: `master` and
+`dev/autobuild`.
 
-* `master`: The main development line. Serum on this branch does not support automatic rebuild when running the development server. Tested manually on macOS and Debian GNU/Linux.
-* `dev/autobuild`: Same as `master` with automatic rebuild support. This feature was implemented by using [synrc/fs](https://github.com/synrc/fs). Tested manually on Debian GNU/Linux with inotify-tools installed as a backend. The Serum development server **fails** on macOS with fsevent. [(Related issue)](https://github.com/Dalgona/Serum/issues/3)
+* `master`: The main development line. Serum on this branch does not support
+automatic rebuild when running the development server. Tested manually on
+macOS and Debian GNU/Linux.
+* `dev/autobuild`: Same as `master` with automatic rebuild support. This
+feature was implemented by using [synrc/fs](https://github.com/synrc/fs).
+Tested manually on Debian GNU/Linux with inotify-tools installed as a backend.
+The Serum development server **fails** on macOS with fsevent.
+[(Related issue)](https://github.com/Dalgona/Serum/issues/3)
 
 ### Building Serum
 
@@ -19,13 +29,16 @@ You can clone the Serum repository from [GitHub](https://github.com/Dalgona/Seru
 
         % git clone https://github.com/Dalgona/Serum.git
 
-2. Type `make` to automatically fetch the dependencies and build Serum escript. If the build succeeded, you will see `serum` executable in the PWD.
+2. Type `make` to automatically fetch the dependencies and build Serum escript.
+If the build succeeded, you will see `serum` executable in the PWD.
 
-3. (Optional) Execute `make install` to copy the program into `/usr/local/bin/` directory, so that you can use Serum from anywhere.
+3. (Optional) Execute `make install` to copy the program into `/usr/local/bin/`
+directory, so that you can use Serum from anywhere.
 
 ### My First Website
 
-Once you have successfully installed Serum, you can create and test your first website with a few keystrokes.
+Once you have successfully installed Serum, you can create and test your first
+website with a few keystrokes.
 
 1. Execute `serum init [directory]` to create a new Serum project.
 
@@ -36,19 +49,28 @@ Once you have successfully installed Serum, you can create and test your first w
         % cd /path/to/project
         % serum build
 
-    When the build completes, the root of your website will be created under `/path/to/project/site` directory. Copy the contents of this directory to your own www directory, or upload them to the external web hosting service.
+    When the build completes, the root of your website will be created under
+    `/path/to/project/site` directory. Copy the contents of this directory to
+    your own www directory, or upload them to the external web hosting service.
 
-3. Or, you can just test your project right away by running `serum server`. The Serum development server is useful when you need to check your website before publishing it.
+3. Or, you can just test your project right away by running `serum server`.
+The Serum development server is useful when you need to check your website
+before publishing it.
 
         % serum server --port <port>
 
-    **NOTE 1:** The server will listen on port 8080 if `--port` (or `-p`) option is not specified.
+    **NOTE 1:** The server will listen on port 8080 if `--port` (or `-p`)
+    option is not specified.
 
-    **NOTE 2:** Always type `quit` command instead of pressing Control-C to quit the development server.
+    **NOTE 2:** Always type `quit` command instead of pressing Control-C to
+    quit the development server.
 
 4. Open a web brower and navigate to your website. That's it!
 
-Congratulations! Yet it looks empty, you have successfully created and built your first website with Serum. Now continue reading [documentations](%pages:docs/index) to customize your project and fill your website with your own contents.
+Congratulations! Yet it looks empty, you have successfully created and built
+your first website with Serum. Now continue reading
+[documentations](%pages:docs/index) to customize your project and fill your
+website with your own contents.
 
 <!--### Configuration
 
@@ -116,28 +138,6 @@ To display your pages properly, you also need to configure `pages.json` inside `
 * `menu_icon` &mdash; The path of image file that appears on the navigation area. Ignored by some templates.
 
 > If you do not define properties for a page in `pages.json`, that page WILL NOT included in the website when building the project, even if the source code for that page exists under `pages/` directory.
-
-### Writing a New Post
-
-`posts/` directory holds markdown of your blog posts. All markdown files under this directory must follow the naming rule of `yyyy-MM-dd-hhmm-title-slug.md`, and the very first line of each markdown file must start with `#` character, followed by a space(`'\x20'`) and title of the post, and the second line must start with `#` character, followed by a space and a list of tags delimited by a comma(`,`). Serum parses the first two lines of each file and generates post metadata.
-
-Below is an example of valid markdown file:
-
-`2016-08-01-1946-my-new-post.md:`
-
-    # Hello! This is My First Post
-    # sample, hello
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing ...
-
-If you don't want to specify tags for a post, just put a `#` character on the second line.
-
-    # Hello! This is My First Post
-    #
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing ...
-
-When building the website, all markdown files under the `posts/` directory are converted into HTML, applied by `templates/post.html.eex` template, and then combined with `templates/base.html.eex` template to produce the output file under `site/posts/` directory. Also, Serum generates `site/posts/index.html`, which is a list of all blog posts.
 
 ### Templates
 
