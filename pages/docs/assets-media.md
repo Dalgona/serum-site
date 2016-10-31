@@ -18,3 +18,18 @@ Serum also creates `css`, `js` and `images` directories under the `assets`
 directory. This is just for your convenience, therefore you are free to change
 the inner directory structure to fit your needs.
 
+You can reference any assets from any template by using `<%= @base_url %>`
+template tag.
+
+```html
+<!-- Example: -->
+<link rel="stylesheet" href="<%= @base_url %>/assets/css/style.css">
+```
+
+By doing this, you can avoid hard-coding the base URL in every reference to
+your assets.
+
+**NOTE:** You can also refer to any media files in templates through the
+exactly same method as above. However, it's not recommended to do this because
+media files are intended to be used in a specific page or blog post.
+
