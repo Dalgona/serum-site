@@ -7,7 +7,7 @@ directory. This file holds the project metadata and various project-scoped
 settings. Below is the content of `serum.json` which is used to build *this
 website*.
 
-```json
+```language-javascript
 {
   "site_name": "Serum",
   "site_description": "A simple static website generator",

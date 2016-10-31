@@ -42,7 +42,7 @@ directly followed by a space (`'# '`).
 
 Following is an example of a valid source markdown file:
 
-```md
+```language-markdown
 # About GenServer in Elixir
 # elixir,otp,study
 
@@ -52,7 +52,7 @@ Lorem ipsum dolor sit amet ...
 Serum doesn't care about spaces between a comma and the next tag, so below is
 also a valid tag line:
 
-```md
+```language-markdown
 # elixir, otp, study
 ```
 
@@ -62,7 +62,7 @@ is not required.
 
 So this markdown file is valid:
 
-```md
+```language-markdown
 # My First Post!
 #
 
@@ -71,7 +71,7 @@ Lorem ipsum dolor sit amet ...
 
 While this one is _invalid_:
 
-```md
+```language-markdown
 # My First Post!
 
 Lorem ipsum dolor sit amet ...
