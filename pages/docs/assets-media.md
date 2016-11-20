@@ -1,3 +1,5 @@
+# Assets and Media
+
 [Back to the index](%pages:docs/index)
 
 ## Assets and Media

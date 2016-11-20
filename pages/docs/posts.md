@@ -1,3 +1,5 @@
+# Writing Blog Posts
+
 [Back to the index](%pages:docs/index)
 
 ## Writing Blog Posts

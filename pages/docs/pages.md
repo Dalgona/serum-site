@@ -1,3 +1,5 @@
-[Back to the index](%pages:doc/index)
+# Adding Pages to Your Website
 
-## The Command-line Program
+[Back to the index](%pages:docs/index)
+
+## Adding Pages to Your Website

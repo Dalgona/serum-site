@@ -1,3 +1,5 @@
+# Documentation Index
+
 ## Serum Documentation
 
 * [The Command-line Program](%pages:docs/cmdline)
