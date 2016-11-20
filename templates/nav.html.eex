@@ -1,3 +1,6 @@
 <ul>
-  <%= for x <- @pages do %><li><a href="<%= "#{@base_url}#{x.name}.html" %>"><%= x.menu_text %></a></li><% end %><li><a href="<%= "#{@base_url}posts/" %>">Posts</a></li>
+  <li><a href="<%= page "index" %>">Home</a></li>
+  <li><a href="<%= page "getting-started" %>">Getting Started</a></li>
+  <li><a href="<%= page "docs/index" %>">Docs</a></li>
+  <li><a href="<%= base "posts" %>">Posts</a></li>
 </ul>

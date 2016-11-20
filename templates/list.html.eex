@@ -1,8 +1,8 @@
 <article class="list">
-  <header><h1><%= @header %></h1></header>
+  <header><h1><%= header %></h1></header>
   <div>
     <ul>
-      <%= for x <- @posts do %>
+      <%= for x <- posts do %>
         <li class="article">
           <h2>
             <a href="<%= x.url %>"><%= x.title %></a><br>

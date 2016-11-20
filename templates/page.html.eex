@@ -1,5 +1,5 @@
 <article>
   <div>
-    <%= @contents %>
+    <%= contents %>
   </div>
 </article>

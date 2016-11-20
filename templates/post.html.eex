@@ -1,17 +1,17 @@
 <article class="post">
   <header>
-    <h1><%= @title %></h1>
+    <h1><%= title %></h1>
     <p>
-      <%= @date %>
-      <%= unless Enum.empty? @tags do %> |
+      <%= date %>
+      <%= unless Enum.empty? tags do %> |
         Tags:
-        <%= for t <- @tags do %>
+        <%= for t <- tags do %>
           <a class="tag" href="<%= t.list_url %>"><%= t.name %></a>
         <% end %>
       <% end %>
     </p>
   </header>
   <div>
-    <%= @contents %>
+    <%= contents %>
   </div>
 </article>
