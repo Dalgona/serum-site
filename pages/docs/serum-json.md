@@ -2,7 +2,7 @@
 
 [Back to the index](%pages:docs/index)
 
-## The `serum.json` File
+# The `serum.json` File
 
 Every Serum project has its own `serum.json` file under the root of the project
 directory. This file holds the project metadata and various project-scoped

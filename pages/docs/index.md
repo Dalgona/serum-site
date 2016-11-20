@@ -1,6 +1,6 @@
 # Documentation Index
 
-## Serum Documentation
+# Serum Documentation
 
 * [The Command-line Program](%pages:docs/cmdline)
 * [The `serum.json` File](%pages:docs/serum-json)

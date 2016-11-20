@@ -2,13 +2,13 @@
 
 [Back to the index](%pages:docs/index)
 
-## Writing Blog Posts
+# Writing Blog Posts
 
 Serum is a blog-aware static website generator and it provides an easy way to
 write blog posts. All you need to do is naming the markdown file properly and
 writing the first two lines of each markdown file appropriately.
 
-### Source File Naming Rules
+## Source File Naming Rules
 
 All blog post source files should be located under `posts` subdirectory of your
 project directory, and should be named according to the following format:
@@ -35,7 +35,7 @@ Followings are examples of valid source file names:
 2016-10-06-1409-serum-is-awesome.md
 ```
 
-### Providing Metadata
+## Providing Metadata
 
 The first two lines of each markdown file are reserved for the post metadata.
 In the first line is the title of the post, and in the next line is a list of

@@ -2,4 +2,4 @@
 
 [Back to the index](%pages:docs/index)
 
-## Adding Pages to Your Website
+# Adding Pages to Your Website

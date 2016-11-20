@@ -2,12 +2,14 @@
 
 [Back to the index](%pages:docs/index)
 
-## Templates
+# Templates
 
 There are five templates you need to define under the `templates` directory.
 Each template file is an _Embedded Elixir(EEx)_ files. Please read
 [the official EEx documentation](http://elixir-lang.org/docs/stable/eex/)
 for more information about EEx.
+
+## Helper Functions
 
 There are some accessor and helper functions for use in templates, which are
 listed below. You will need to utilize these functions to make templates that
@@ -102,6 +104,8 @@ media files. This is intended because media files are supposed to be used in
 files into `assets/` directory.
 
 <!-- TODO: add helper for tag index -->
+
+## List of Required Templates
 
 ### `templates/base.html.eex`
 
