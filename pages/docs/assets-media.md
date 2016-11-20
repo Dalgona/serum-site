@@ -8,7 +8,7 @@ Each Serum project can also have two additional directories: `assets` and
 `media`. The assets directory is used for storing stylesheets, javascript
 sources and images which are used globally within the project. While the media
 directory is used to store images, audio or other media files which are
-referenced by some of pages or blog posts. These directories and their contents
+referenced by some pages or blog posts. These directories and their contents
 will be copied into the destination directory when the project is built.
 
 When a new Serum project is being initialized, these two directories are also
@@ -20,18 +20,18 @@ Serum also creates `css`, `js` and `images` directories under the `assets`
 directory. This is just for your convenience, therefore you are free to change
 the inner directory structure to fit your needs.
 
-You can reference any assets from any template by using `<%= @base_url %>`
-template tag.
+You can reference any assets from any template by using `asset/1` template
+helper function.
 
 ```html
 <!-- Example: -->
-<link rel="stylesheet" href="<%= @base_url %>/assets/css/style.css">
+<link rel="stylesheet" href="<%= asset "css/style.css" %>">
 ```
 
-By doing this, you can avoid hard-coding the base URL in every reference to
+By doing this, you can avoid hard-coding the full URL in every reference to
 your assets.
 
-**NOTE:** You can also refer to any media files in templates through the
-exactly same method as above. However, it's not recommended to do this because
-media files are intended to be used in a specific page or blog post.
+**NOTE:** You can also refer to any media files in templates by using `base/1`
+function. However, it's not recommended to do this because media files are
+intended to be used in a specific page or blog post.
 

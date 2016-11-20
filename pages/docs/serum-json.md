@@ -23,29 +23,32 @@ website*.
 
 These are a list of fields currently accepted by Serum:
 
-* `site_name` (string, recommended)
+* `site_name` (string, required)
 
     The name (or title) of the website. The value of this field is intended to
     be shown in the top of pages and the titlebar of a web browser.
 
-* `site_description` (string, recommended)
+* `site_description` (string, required)
 
     The short description (or subtitle) of the website. Could be shown under
     the banner area of each page.
 
-* `base_url` (string, **required**)
+* `base_url` (string, required)
 
     The root path of the website on the web server. For example, if you want to
     make the front page of the website accessible from `http://example.com/~user/site1/`,
     you must set `base_url` as `"~user/site1/"`.
 
-* `author` (string, recommended)
+    Also, you must append a slash (`/`) at the end of the path, or the build
+    process will fail with JSON validation errors.
+
+* `author` (string, required)
 
     The name of the author (or admin). The main purpose of this field is not
     specified, and it can be used anywhere in the templates (e.g. in the footer
     area of a webpage or in the header area of a blog post)
 
-* `author_email` (string, recommended)
+* `author_email` (string, required)
 
     The email address of the author. The main purpose of this field is not
     specified.
@@ -58,8 +61,8 @@ These are a list of fields currently accepted by Serum:
     [this documentation](https://hexdocs.pm/timex/Timex.Format.DateTime.Formatters.Default.html)
     for detailed explanation of the formatting syntax.
 
-    If this field is not defined, `"{YYYY}-{0M}-{0D}"` will be used as a
-    default format specifier.
+    If this field is not defined or invalid, `"{YYYY}-{0M}-{0D}"` will be used
+    as a default format specifier.
 
 * `preview_length` (integer, *optional*)
 
