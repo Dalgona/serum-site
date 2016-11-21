@@ -4,10 +4,10 @@
 
 # Templates
 
-There are five templates you need to define under the `templates` directory.
-Each template file is an _Embedded Elixir(EEx)_ files. Please read
-[the official EEx documentation](http://elixir-lang.org/docs/stable/eex/)
-for more information about EEx.
+Serum provides five templates you need to define under the `templates`
+directory.  Each template file is an _Embedded Elixir(EEx)_ files. Please read
+[the official EEx documentation](http://elixir-lang.org/docs/stable/eex/) for
+more information about EEx.
 
 ## Helper Functions
 
@@ -107,6 +107,10 @@ files into `assets/` directory.
 
 ## List of Required Templates
 
+Below is the list of all five templates you need to define, with brief
+illustrations showing the role of each template and what functions or variables
+can be used.
+
 ### `templates/base.html.eex`
 
 <svg width="490" height="330" style="background:white">
@@ -150,9 +154,27 @@ files into `assets/` directory.
   </g>
 </svg>
 
-Defines the overall structure and look & feel of the website.
+This template defines the overall structure and look & feel of the website. In
+other words, the root element of the page (`<html>`&hellip;`</html>`) should be
+defined here.
 
-Description
+In addition to common helper functions, you need to use the additional
+variables specific to this template, which are:
+
+* `page_title`
+
+    The text displayed in the title bar of the web browser. This is usually
+    expanded into the title of a page or a blog post.
+
+* `navigation`
+
+    This variable is replaced by the rendered result of `nav.html.eex`.
+
+* `contents`
+
+    Represents the main contents area. Depending on the type of the page, it's
+    replaced by the rendered result of `page.html.eex`, `list.html.eex`, or
+    `post.html.eex`.
 
 ### `templates/nav.html.eex`
 
