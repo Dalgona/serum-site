@@ -178,9 +178,9 @@ variables specific to this template, which are:
 
 ### `templates/nav.html.eex`
 
-<svg width="490" height="240" style="background:white">
+<svg width="490" height="250" style="background:white">
   <g transform="translate(5,5)">
-    <rect x="0" y="0" width="480" height="230" style="stroke:#c0c0c0;stroke-width:2px;fill:none"></rect>
+    <rect x="0" y="0" width="480" height="240" style="stroke:#c0c0c0;stroke-width:2px;fill:none"></rect>
     <rect x="0" y="0" width="480" height="30" style="stroke:none;fill:#c0c0c0"></rect>
     <g style="opacity:0.5" transform="translate(405,5)">
       <rect x="0" y="0" width="20" height="20" style="stroke:none;fill:white"></rect>
@@ -194,18 +194,20 @@ variables specific to this template, which are:
       </text>
     </g>
     <g transform="translate(10,80)">
-      <rect x="0.5" y="0.5" width="459" height="59" style="stroke:#c04078;fill:rgba(192,64,120,0.3)"></rect>
+      <rect x="0.5" y="0.5" width="459" height="69" style="stroke:#c04078;fill:rgba(192,64,120,0.3)"></rect>
       <text y="20">
         <tspan x="5" style="fill:#c04078;font-weight:bold">Global Navigation Area</tspan>
+        <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;%= base &quot;...&quot; %&gt;</tspan>
+        <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;%= page &quot;...&quot; %&gt;</tspan>
       </text>
     </g>
-    <g transform="translate(10,150)">
+    <g transform="translate(10,160)">
       <rect width="460" height="30" style="stroke:none;fill:rgba(0,0,0,0.1)"></rect>
       <text y="20">
         <tspan x="5" style="opacity:0.5">Main Contents Area</tspan>
       </text>
     </g>
-    <g transform="translate(10,190)">
+    <g transform="translate(10,200)">
       <rect width="460" height="30" style="stroke:none;fill:rgba(0,0,0,0.1)"></rect>
       <text y="20">
         <tspan x="5" style="opacity:0.5">Site Footer</tspan>
@@ -214,15 +216,17 @@ variables specific to this template, which are:
   </g>
 </svg>
 
-Defines the appearance of the global navigation area.
-
-Description
+Defines the appearance of the global navigation area. You can place some
+hyperlinks to pages here. It's safe to rely on this template for now, but
+later, this template will be superseded by "Includes", which is the
+generalization of this template and the more flexible way to compose your
+templates.
 
 ### `templates/page.html.eex`
 
-<svg width="490" height="330" style="background:white">
+<svg width="490" height="230" style="background:white">
   <g transform="translate(5,5)">
-    <rect x="0" y="0" width="480" height="320" style="stroke:#c0c0c0;stroke-width:2px;fill:none"></rect>
+    <rect x="0" y="0" width="480" height="220" style="stroke:#c0c0c0;stroke-width:2px;fill:none"></rect>
     <rect x="0" y="0" width="480" height="30" style="stroke:none;fill:#c0c0c0"></rect>
     <g style="opacity:0.5" transform="translate(405,5)">
       <rect x="0" y="0" width="20" height="20" style="stroke:none;fill:white"></rect>
@@ -242,12 +246,13 @@ Description
       </text>
     </g>
     <g transform="translate(10,120)">
-      <rect width="460" height="30" style="stroke:none;fill:rgba(0,0,0,0.1)"></rect>
+      <rect x="0.5" y="0.5" width="459" height="49" style="stroke:#c04078;stroke-width:1px;fill:rgba(192,64,120,0.3)"></rect>
       <text y="20">
-        <tspan x="5" style="opacity:0.5">Main Contents Area</tspan>
+        <tspan x="5" style="fill:#c04078;font-weight:bold">Main Contents Area</tspan>
+        <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;%= contents %&gt;</tspan>
       </text>
     </g>
-    <g transform="translate(10,160)">
+    <g transform="translate(10,180)">
       <rect width="460" height="30" style="stroke:none;fill:rgba(0,0,0,0.1)"></rect>
       <text y="20">
         <tspan x="5" style="opacity:0.5">Site Footer</tspan>
@@ -255,12 +260,17 @@ Description
     </g>
   </g>
 </svg>
+
+This template does only one job: Wrapping the contents of a page. When building
+a page, the HTML converted from a markdown file will be wrapped by this
+template, and the wrapped contents will finally be wrapped again, by
+`base.html.eex`.
 
 ### `templates/list.html.eex`
 
-<svg width="490" height="330" style="background:white">
+<svg width="490" height="290" style="background:white">
   <g transform="translate(5,5)">
-    <rect x="0" y="0" width="480" height="320" style="stroke:#c0c0c0;stroke-width:2px;fill:none"></rect>
+    <rect x="0" y="0" width="480" height="280" style="stroke:#c0c0c0;stroke-width:2px;fill:none"></rect>
     <rect x="0" y="0" width="480" height="30" style="stroke:none;fill:#c0c0c0"></rect>
     <g style="opacity:0.5" transform="translate(405,5)">
       <rect x="0" y="0" width="20" height="20" style="stroke:none;fill:white"></rect>
@@ -280,12 +290,16 @@ Description
       </text>
     </g>
     <g transform="translate(10,120)">
-      <rect width="460" height="30" style="stroke:none;fill:rgba(0,0,0,0.1)"></rect>
+      <rect x="0.5" y="0.5" width="459" height="109" style="stroke:#c04078;stroke-width:1px;fill:rgba(192,64,120,0.3)"></rect>
       <text y="20">
-        <tspan x="5" style="opacity:0.5">Main Contents Area</tspan>
+        <tspan x="5" style="fill:#c04078;font-weight:bold">Main Contents Area</tspan>
+        <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;%= header %&gt;</tspan>
+        <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;%= for p <- posts do %&gt;</tspan>
+        <tspan x="5" dy="1.2em" style="font-family:Inconsolata">...</tspan>
+        <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;% end %&gt;</tspan>
       </text>
     </g>
-    <g transform="translate(10,160)">
+    <g transform="translate(10,240)">
       <rect width="460" height="30" style="stroke:none;fill:rgba(0,0,0,0.1)"></rect>
       <text y="20">
         <tspan x="5" style="opacity:0.5">Site Footer</tspan>
@@ -294,15 +308,35 @@ Description
   </g>
 </svg>
 
-Defines the appearance of the blog post list.
+Defines the appearance of the blog post list. Place these variables in
+appropriate position:
 
-Description
+* `header`
+
+    The title text of the list page such as *"All Posts"* or *"Posts tagged
+    ..."*. You can set the format of this text in `serum.json`.
+
+* `posts`
+
+    An enumerable of maps containing post metadata, sorted by date in
+    descending order. Following is the list of keys and description of values.
+
+    * `url`: URL of this blog post
+      (e.g., `/base/url/posts/YYYY-MM-DD-hhmm-post.html`)
+    * `title`: Title of this blog post
+    * `date`: Formatted representation of date when this post has been written
+    * `tags`: An enumerable containing tag information
+
+    Each item in `tags` enumerable is also a map. Its keys are:
+
+    * `list_url`: URL of the list of posts with this tag.
+    * `name`: Name of this tag.
 
 ### `templates/post.html.eex`
 
-<svg width="490" height="330" style="background:white">
+<svg width="490" height="290" style="background:white">
   <g transform="translate(5,5)">
-    <rect x="0" y="0" width="480" height="320" style="stroke:#c0c0c0;stroke-width:2px;fill:none"></rect>
+    <rect x="0" y="0" width="480" height="280" style="stroke:#c0c0c0;stroke-width:2px;fill:none"></rect>
     <rect x="0" y="0" width="480" height="30" style="stroke:none;fill:#c0c0c0"></rect>
     <g style="opacity:0.5" transform="translate(405,5)">
       <rect x="0" y="0" width="20" height="20" style="stroke:none;fill:white"></rect>
@@ -322,12 +356,16 @@ Description
       </text>
     </g>
     <g transform="translate(10,120)">
-      <rect width="460" height="30" style="stroke:none;fill:rgba(0,0,0,0.1)"></rect>
+      <rect x="0.5" y="0.5" width="459" height="109" style="stroke:#c04078;stroke-width:1px;fill:rgba(192,64,120,0.3)"></rect>
       <text y="20">
-        <tspan x="5" style="opacity:0.5">Main Contents Area</tspan>
+        <tspan x="5" style="fill:#c04078;font-weight:bold">Main Contents Area</tspan>
+        <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;%= title %&gt;</tspan>
+        <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;%= date %&gt;</tspan>
+        <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;%= for t <- tags do %&gt; ... &lt;% end %&gt;</tspan>
+        <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;%= contents %&gt;</tspan>
       </text>
     </g>
-    <g transform="translate(10,160)">
+    <g transform="translate(10,240)">
       <rect width="460" height="30" style="stroke:none;fill:rgba(0,0,0,0.1)"></rect>
       <text y="20">
         <tspan x="5" style="opacity:0.5">Site Footer</tspan>
@@ -335,4 +373,24 @@ Description
     </g>
   </g>
 </svg>
+
+This template formats blog post pages. Use these variables in appropriate
+places:
+
+* `title`
+
+    Title of this blog post.
+
+* `date`
+
+    Formatted string representation of date when this post has been written.
+
+* `tags`
+
+    An enumerable containg tag information. Please see the description for
+    `list.html.eex` above for detailed description on this variable.
+
+* `contents`
+
+    The HTML code converted from the source markdown file.
 
