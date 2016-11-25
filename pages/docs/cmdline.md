@@ -11,7 +11,7 @@ provided by the Serum command-line program.
 **NOTE:** This document assumes that you have installed Serum on an easily
 reachable directory or you have set `$PATH` environment variable appropriately.
 
-## `init` &mdash; Starts a New Project
+### `init` &mdash; Starts a New Project
 
 ```
 % serum init [directory]
@@ -26,7 +26,7 @@ existing files.
 If the `directory` argument is not passed, Serum will try to initialize a new
 project into your current working directory.
 
-## `build` &mdash; Builds a Project
+### `build` &mdash; Builds a Project
 
 ```
 % serum build [-p|--parallel] [(-o|--output) <outdir>] [directory]
@@ -37,7 +37,7 @@ The `build` task builds your Serum project into a complete website. The
 argument may be ignored, in this case you need to be in (i.e, the PWD must be
 set to) a valid Serum project directory.
 
-### Options
+#### Options
 
 * `-p` or `--parallel`<br>
     Basically Serum builds all pages one by one sequentially. If this option
@@ -50,7 +50,7 @@ set to) a valid Serum project directory.
     this option is not supplied, Serum will build the website into
     `</path/to/project>/site` directory by default.
 
-## `server` &mdash; The Serum Development Server
+### `server` &mdash; The Serum Development Server
 
 ```
 % serum server [(-p|--port) <port>] [directory]
@@ -61,14 +61,14 @@ Like the `build` task, the optional `directory` option should be a valid Serum
 project directory. The website will be built into a temporary directory under
 `/tmp`, and will be removed when the server quits.
 
-### Options
+#### Options
 
 * `-p <port>` or `--port <port>`<br>
     By default, the Serum development server listens on port 8080. If that port
     is unavailable or you need to use the other port, you can override that by
     using this option.
 
-### Server Commands
+#### Server Commands
 
 Once the development server has successfully started, you can interact with
 the server by typing commands. Available commands are:
@@ -84,7 +84,7 @@ to contents of the source directory.
 server. Pressing Control-C causes unclean exit, leaving the temporary directory
 not removed.
 
-## `help` &mdash; Shows the Help Message
+### `help` &mdash; Shows the Help Message
 
 ```
 % serum help
