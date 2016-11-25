@@ -74,3 +74,15 @@ These are a list of fields currently accepted by Serum:
     `serum.json`), as it disables additional operations for generating preview
     texts.
 
+* `list_title_all` (string, *optional*)
+
+    Sets the title text of "all posts" list page. If not given, `"All Posts"`
+    will be used as the default title string.
+
+* `list_title_tag` (string, *optional*)
+
+    Defines title text format of tag-filtered list page. The default format is
+    `"Posts Tagged ~s"`. Note that you must put exactly one `~s` in the format
+    string, as this is the placeholder for tag name. If you need to display
+    `~` character in pages, insert `~~` (two consecutive tildes).
+
