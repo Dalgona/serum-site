@@ -113,7 +113,7 @@ can be used.
 
 ### `templates/base.html.eex`
 
-<svg width="490" height="330" style="background:white">
+<svg width="490" viewBox="0 0 490 330" style="background:white">
   <g transform="translate(5,5)">
     <rect x="0" y="0" width="480" height="320" style="stroke:#c04078;stroke-width:2px;fill:none"></rect>
     <rect x="0" y="0" width="480" height="30" style="stroke:none;fill:#c04078"></rect>
@@ -178,7 +178,7 @@ variables specific to this template, which are:
 
 ### `templates/nav.html.eex`
 
-<svg width="490" height="250" style="background:white">
+<svg width="490" viewBox="0 0 490 250" style="background:white">
   <g transform="translate(5,5)">
     <rect x="0" y="0" width="480" height="240" style="stroke:#c0c0c0;stroke-width:2px;fill:none"></rect>
     <rect x="0" y="0" width="480" height="30" style="stroke:none;fill:#c0c0c0"></rect>
@@ -224,7 +224,7 @@ templates.
 
 ### `templates/page.html.eex`
 
-<svg width="490" height="230" style="background:white">
+<svg width="490" viewBox="0 0 490 230" style="background:white">
   <g transform="translate(5,5)">
     <rect x="0" y="0" width="480" height="220" style="stroke:#c0c0c0;stroke-width:2px;fill:none"></rect>
     <rect x="0" y="0" width="480" height="30" style="stroke:none;fill:#c0c0c0"></rect>
@@ -268,7 +268,7 @@ template, and the wrapped contents will finally be wrapped again, by
 
 ### `templates/list.html.eex`
 
-<svg width="490" height="290" style="background:white">
+<svg width="490" viewBox="0 0 490 290" style="background:white">
   <g transform="translate(5,5)">
     <rect x="0" y="0" width="480" height="280" style="stroke:#c0c0c0;stroke-width:2px;fill:none"></rect>
     <rect x="0" y="0" width="480" height="30" style="stroke:none;fill:#c0c0c0"></rect>
@@ -334,7 +334,7 @@ appropriate position:
 
 ### `templates/post.html.eex`
 
-<svg width="490" height="290" style="background:white">
+<svg width="490" viewBox="0 0 490 290" style="background:white">
   <g transform="translate(5,5)">
     <rect x="0" y="0" width="480" height="280" style="stroke:#c0c0c0;stroke-width:2px;fill:none"></rect>
     <rect x="0" y="0" width="480" height="30" style="stroke:none;fill:#c0c0c0"></rect>

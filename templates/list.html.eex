@@ -9,10 +9,13 @@
           </h2>
           <p class="post-date">
             <%= x.date %>
-            <%= unless Enum.empty? x.tags do %> |
-              <%= for t <- x.tags do %>
-                <a class="tag" href="<%= t.list_url %>"><%= t.name %></a>
-              <% end %>
+            <%= unless Enum.empty? x.tags do %>
+              <span class="tags">
+                Tags:
+                <%= for t <- x.tags do %>
+                  <a class="tag" href="<%= t.list_url %>"><%= t.name %></a>
+                <% end %>
+              </span>
             <% end %>
           </p>
           <p class="post-preview"><%= x.preview_text %></p></a>

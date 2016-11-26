@@ -3,11 +3,13 @@
     <h1><%= title %></h1>
     <p>
       <%= date %>
-      <%= unless Enum.empty? tags do %> |
-        Tags:
-        <%= for t <- tags do %>
-          <a class="tag" href="<%= t.list_url %>"><%= t.name %></a>
-        <% end %>
+      <%= unless Enum.empty? tags do %>
+        <span class="tags">
+          Tags:
+          <%= for t <- tags do %>
+            <a class="tag" href="<%= t.list_url %>"><%= t.name %></a>
+          <% end %>
+        </span>
       <% end %>
     </p>
   </header>

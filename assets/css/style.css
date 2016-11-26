@@ -11,9 +11,6 @@ body {
 a:link, a:active, a:visited { color: #4078c0; text-decoration: none; }
 a:hover { text-decoration: underline }
 
-header#top {
-}
-
 header#top h1
 {
   margin: 0 0 0 -4px;
@@ -130,23 +127,17 @@ article header p {
   opacity: 0.8;
 }
 
-a.tag {
-  padding: 0 5px;
-}
-
 article > div p,
 article > div ul,
 article > div ol {
   line-height: 1.6em;
 }
 
-article > div > p > img {
-  box-sizing: border-box;
-  margin: 1em;
-  width: calc(100% - 2em);
-  border: 8px solid white;
-  border-radius: 3px;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.3), 0 10px 20px rgba(0,0,0,0.2);
+article > div > img,
+article > div > svg,
+article > div > p > img,
+article > div > p > svg {
+  max-width: 100%;
 }
 
 article.list > div > ul {
@@ -170,4 +161,48 @@ p.post-date {
   letter-spacing: 0.2em;
   font-weight: 400;
   opacity: 0.8;
+}
+
+span.tags:before { content: '|'; }
+
+span.tags a.tag { padding: 0 5px; }
+span.tags a.tag:first-child { padding-left: 0; }
+span.tags a.tag:last-child { padding-right: 0; }
+
+@media screen and (max-width: 899px) {
+  nav ul li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  nav ul li:before {
+    content: '';
+    padding: 0;
+  }
+
+  #wrapper {
+    width: 100%;
+    padding: 20px;
+  }
+
+  header#top h1 {
+    margin: 0;
+    font-size: 60px;
+  }
+
+  header#top p {
+    font-size: 0.9rem;
+  }
+
+  article > div ul,
+  article > div ol {
+    padding-left: 24px;
+  }
+
+  pre code {
+    overflow-x: scroll;
+  }
+
+  span.tags { display: block; }
+  span.tags:before { content: ''; }
 }
