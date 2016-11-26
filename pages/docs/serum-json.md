@@ -17,7 +17,8 @@ website*.
   "author_email": "dalgona@hontou.moe",
   "author": "Dalgona.",
   "date_format": "{WDfull}, {D} {Mshort} {YYYY}",
-  "preview_length": 200
+  "preview_length": 200,
+  "list_title_tag": "Posts Tagged \"~s\""
 }
 ```
 
