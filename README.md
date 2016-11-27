@@ -1,8 +1,8 @@
 # Source code for the official website of Serum
 
 This repository holds source codes for the official website of
-[Serum](https://dalgona.hontou.moe/Serum). I recommend you to read these codes
-while reading [docs](https://dalgona.hontou.moe/Serum/docs/).
+[Serum](http://dalgona.hontou.moe/Serum). I recommend you to read these codes
+while reading [docs](http://dalgona.hontou.moe/Serum/docs/).
 
 ## Building the site
 

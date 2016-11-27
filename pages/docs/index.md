@@ -4,7 +4,7 @@
 
 These documents below are complete manual of Serum. For those who think it's
 not enough, the full source code for this website itself is also provided on
-[GitHub](#).
+[GitHub](https://github.com/Dalgona/serum-site/).
 
 * [The Command-line Program](%pages:docs/cmdline)
 * [The `serum.json` File](%pages:docs/serum-json)
