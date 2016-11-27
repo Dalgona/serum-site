@@ -4,9 +4,10 @@
 
 ## Requirement
 
-* Elixir 1.2 or newer
+* Elixir 1.2 or newer (1.3.3 or newer is required when running
+  [Dialyxir](https://github.com/jeremyjh/dialyxir)&#x29;
 
-    Please visit [the official Elixir website](elixir-lang.org) for
+    Please visit [the official Elixir website](http://elixir-lang.org) for
     installation instructions.
 
 ## Obtaining the Source Code
