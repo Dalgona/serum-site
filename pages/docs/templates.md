@@ -294,7 +294,7 @@ template, and the wrapped contents will finally be wrapped again, by
       <text y="20">
         <tspan x="5" style="fill:#c04078;font-weight:bold">Main Contents Area</tspan>
         <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;%= header %&gt;</tspan>
-        <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;%= for p <- posts do %&gt;</tspan>
+        <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;%= for p &lt;- posts do %&gt;</tspan>
         <tspan x="5" dy="1.2em" style="font-family:Inconsolata">...</tspan>
         <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;% end %&gt;</tspan>
       </text>
@@ -361,7 +361,7 @@ appropriate position:
         <tspan x="5" style="fill:#c04078;font-weight:bold">Main Contents Area</tspan>
         <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;%= title %&gt;</tspan>
         <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;%= date %&gt;</tspan>
-        <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;%= for t <- tags do %&gt; ... &lt;% end %&gt;</tspan>
+        <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;%= for t &lt;- tags do %&gt; ... &lt;% end %&gt;</tspan>
         <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;%= contents %&gt;</tspan>
       </text>
     </g>
