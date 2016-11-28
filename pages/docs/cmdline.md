@@ -29,7 +29,7 @@ project into your current working directory.
 ### `build` &mdash; Builds a Project
 
 ```
-% serum build [-p|--parallel] [(-o|--output) <outdir>] [directory]
+% serum build [-p|--parallel] [-s|--skip-postbuild] [(-o|--output) <outdir>] [directory]
 ```
 
 The `build` task builds your Serum project into a complete website. The
@@ -43,6 +43,9 @@ set to) a valid Serum project directory.
     Basically Serum builds all pages one by one sequentially. If this option
     is provided, Serum will perform a parallel build by launching one build
     process per a page at the same time.
+* `s` or `--skip-postbuild`<br>
+    If this option is given, Serum will skip executing the postbuild script
+    even if the script is specified in `serum.json`.
 * `-o <outdir>` or `--output <outdir>`<br>
     The output directory of your website can be set by using this option. It
     is recommended to point to an empty directory, because all existing files

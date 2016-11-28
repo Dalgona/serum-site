@@ -87,3 +87,10 @@ These are a list of fields currently accepted by Serum:
     string, as this is the placeholder for tag name. If you need to display
     `~` character in pages, insert `~~` (two consecutive tildes).
 
+* `postbuild` (string, *optional*)
+
+    Specifies a program or a script which will be run after the build process
+    completes. It can be a reletive path, an absolute path, or a name of an
+    executable located in `$PATH`. The specified program must take one
+    argument, which is the location of the output directory.
+
