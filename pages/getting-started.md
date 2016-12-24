@@ -4,29 +4,18 @@
 
 ## Requirement
 
-* Elixir 1.2 or newer (1.3.3 or newer is required when running
-  [Dialyxir](https://github.com/jeremyjh/dialyxir)&#x29;
+* Elixir 1.3.3 or newer
 
     Please visit [the official Elixir website](http://elixir-lang.org) for
     installation instructions.
 
-## Obtaining the Source Code
+* To enable the automatic rebuild feature, you need to install an external
+package depending on your operating system.
 
-You can clone the Serum repository from
-[GitHub](https://github.com/Dalgona/Serum). Currently there are two branches
-which are considered to be suitable for daily use: `master` and
-`dev/autobuild`.
+    * For Linux-based OS: `inotify-tools`
+    * For macOS: Install `fsevent_watch` with brew
 
-* `master`: The main development line. Serum on this branch does not support
-automatic rebuild when running the development server. Tested manually on
-macOS and Debian GNU/Linux.
-* `dev/autobuild`: Same as `master` with automatic rebuild support. This
-feature was implemented by using [synrc/fs](https://github.com/synrc/fs).
-Tested manually on Debian GNU/Linux with inotify-tools installed as a backend.
-The Serum development server **fails** on macOS with fsevent.
-[(Related issue)](https://github.com/Dalgona/Serum/issues/3)
-
-## Building Serum
+## Obtaining and Building Serum
 
 1. Use `git` to clone the repository.
 
