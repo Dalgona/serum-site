@@ -1,6 +1,7 @@
 <ul>
   <li><a href="<%= page "index" %>">Home</a></li>
   <li><a href="<%= page "getting-started" %>">Getting Started</a></li>
+  <li><a href="<%= page "microscope" %>">Microscope</a></li>
   <li><a href="<%= page "docs/index" %>">Docs</a></li>
   <li><a href="<%= base "posts" %>">Posts</a></li>
 </ul>
