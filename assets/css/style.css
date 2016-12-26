@@ -133,10 +133,8 @@ article > div ol {
   line-height: 1.6em;
 }
 
-article > div > img,
-article > div > svg,
-article > div > p > img,
-article > div > p > svg {
+article > div img,
+article > div svg {
   max-width: 100%;
 }
 
