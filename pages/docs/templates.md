@@ -18,7 +18,7 @@ really work.
 ### `site_name/0`
 
 ```lang-markup
-<%= site_name %>
+<%= site_name() %>
 ```
 
 returns the name of the website, which are specified in `serum.json` file.
@@ -26,7 +26,7 @@ returns the name of the website, which are specified in `serum.json` file.
 ### `site_description/0`
 
 ```lang-markup
-<%= site_description %>
+<%= site_description() %>
 ```
 
 returns the description (or subtitle) of the website, which are specified
@@ -35,7 +35,7 @@ in `serum.json` file.
 ### `author/0`
 
 ```lang-markup
-<%= author %>
+<%= author() %>
 ```
 
 returns the value of `author` field in `serum.json` file.
@@ -43,7 +43,7 @@ returns the value of `author` field in `serum.json` file.
 ### `author_email/0`
 
 ```lang-markup
-<%= author_email %>
+<%= author_email() %>
 ```
 
 returns the email address of website author specified in `serum.json` file.
@@ -102,6 +102,18 @@ media files. This is intended because media files are supposed to be used in
 *some* pages or blog posts. You can, still, access those files by using
 `base/1` function, but in that case you really need to consider moving those
 files into `assets/` directory.
+
+**NOTE:** Since Elixir 1.4, calling zero-arity functions without parentheses
+will cause warnings.
+
+```lang-markup
+<!-- OK -->
+<%= base() %>
+<%= author_email() %>
+<!-- Still OK, but with warnings -->
+<%= base %>
+<%= author_email %>
+```
 
 <!-- TODO: add helper for tag index -->
 
