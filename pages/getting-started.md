@@ -4,7 +4,7 @@
 
 ## Requirement
 
-* Elixir 1.3.3 or newer
+* Elixir 1.4 or newer
 
     Please visit [the official Elixir website](http://elixir-lang.org) for
     installation instructions.
