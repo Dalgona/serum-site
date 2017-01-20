@@ -1,6 +1,6 @@
 # Microscope
 
-# The Microscope Project (&beta;)
+# The Microscope Project
 
 Microscope is a simple static web server which powers Serum's development
 server functionality. Originally, it was a part of Serum, but it has been

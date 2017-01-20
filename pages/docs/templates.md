@@ -397,6 +397,11 @@ places:
 
     Formatted string representation of date when this post has been written.
 
+* `raw_date`
+
+    A nested tuple of integers representing the date of the post, in the form of
+    `{{year, month, day}, {hours, minutes, 0}}`.
+
 * `tags`
 
     An enumerable containg tag information. Please see the description for

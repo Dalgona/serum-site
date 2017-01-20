@@ -14,3 +14,9 @@ not enough, the full source code for this website itself is also provided on
 * [Assets and Media](%pages:docs/assets-media)
 * [Special Syntax for Markdown](%pages:docs/md-specials)
 
+# Changelogs
+
+Serum is still in early development stage, so many things change in short period
+of time.
+
+* [Changes in January 2017](%pages:docs/changes/201701)
