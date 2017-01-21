@@ -31,7 +31,9 @@ helper function.
 By doing this, you can avoid hard-coding the full URL in every reference to
 your assets.
 
-**NOTE:** You can also refer to any media files in templates by using `base/1`
-function. However, it's not recommended to do this because media files are
-intended to be used in a specific page or blog post.
-
+<blockquote class="note">
+  <header>NOTE</header>
+  <p>You can also refer to any media files in templates by using
+  <code>base/1</code> function. However, it's not recommended to do this because
+  media files are intended to be used in a specific page or blog post.</p>
+</blockquote>

@@ -79,6 +79,9 @@ While this one is _invalid_:
 Lorem ipsum dolor sit amet ...
 ```
 
-**NOTE:** Although the first two lines of source markdown files look like
-"Heading 1" block, this part is not parsed as a markdown code. Every special
-character you put in here will be displayed as is.
+<blockquote class="note">
+  <header>NOTE</header>
+  <p>Although the first two lines of source markdown files look like "Heading 1"
+  block, this part is not parsed as a markdown code. Every special character you
+  put in here will be displayed as is.</p>
+</blockquote>

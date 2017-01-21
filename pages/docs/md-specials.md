@@ -33,7 +33,3 @@ This code is quite self-explanatory. The only one thing you need to remember
 is that you should not append ".html" at the end when using `%pages:` or
 `%posts:` notation.
 
-**NOTE:** You can't use this syntax with HTML tags for now. For example, you
-can't use `%media:` in `<img src="...">`. This feature will be supported in
-later versions of Serum.
-

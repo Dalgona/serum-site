@@ -51,11 +51,17 @@ before publishing it.
 
         % serum server --port <port>
 
-    **NOTE 1:** The server will listen on port 8080 if `--port` (or `-p`)
-    option is not specified.
+    <blockquote class="note">
+      <header>NOTE 1</header>
+      <p>The server will listen on port 8080 if `--port` (or `-p`) option is
+      not specified.</p>
+    </blockquote>
 
-    **NOTE 2:** Always type `quit` command instead of pressing Control-C to
-    quit the development server.
+    <blockquote class="note">
+      <header>NOTE 2</header>
+      <p>Always type `quit` command instead of pressing Control-C to quit the
+      development server.</p>
+    </blockquote>
 
 4. Open a web brower and navigate to your website. That's it!
 
