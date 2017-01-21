@@ -138,6 +138,26 @@ article > div svg {
   max-width: 100%;
 }
 
+blockquote {
+  margin: 1em 0;
+  padding: 0.5em 0.75em 0 0.75em;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+blockquote header {
+  font-weight: bold;
+}
+
+blockquote p {
+  margin: 0.5em 0;
+  font-size: 0.9em;
+}
+
+blockquote.note {
+  border-color: #78c040;
+  background-color: rgba(120, 192, 64, 0.125);
+}
+
 article.list > div > ul {
   padding: 0;
   list-style-type: none;

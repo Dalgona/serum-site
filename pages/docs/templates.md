@@ -97,14 +97,20 @@ append `.html` to the name of a post.
 Use this function whenever you need to reference an asset. Calling
 `asset("path")` is equivalent to calling `base("/base/url/assets/path")`.
 
-**NOTE:** You may have noticed that there is no helper function for accessing
-media files. This is intended because media files are supposed to be used in
-*some* pages or blog posts. You can, still, access those files by using
-`base/1` function, but in that case you really need to consider moving those
-files into `assets/` directory.
+<blockquote class="note">
+  <header>NOTE 1</header>
+  <p>You may have noticed that there is no helper function for accessing media
+  files. This is intended because media files are supposed to be used in
+  <i>some</i> pages or blog posts. You can, still, access those files by using
+  <code>base/1</code> function, but in that case you really need to consider
+  moving those files into <code>assets/</code> directory.</p>
+</blockquote>
 
-**NOTE:** Since Elixir 1.4, calling zero-arity functions without parentheses
-will cause warnings.
+<blockquote class="note">
+  <header>NOTE 2</header>
+  <p>Since Elixir 1.4, calling zero-arity functions without parentheses will
+  cause warnings.</p>
+</blockquote>
 
 ```lang-markup
 <!-- OK -->

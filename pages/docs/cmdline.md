@@ -8,8 +8,12 @@ Every tasks related to your Serum projects are done by using the Serum
 command-line program "`serum`." This document describes all tasks and options
 provided by the Serum command-line program.
 
-**NOTE:** This document assumes that you have installed Serum on an easily
-reachable directory or you have set `$PATH` environment variable appropriately.
+<blockquote class="note">
+  <header>NOTE</header>
+  <p>This document assumes that you have installed Serum on an easily reachable
+  directory or you have set <code>$PATH</code> environment variable
+  appropriately.</p>
+</blockquote>
 
 ### `init` &mdash; Starts a New Project
 
@@ -76,13 +80,12 @@ the server by typing commands. Available commands are:
 * `build` &mdash; Rebuilds current project.
 * `quit` &mdash; Stops the development server and quit.
 
-**NOTE:** If you are using Serum on the `dev/autobuild` branch, the Serum
-development server will automatically rebuild the website if changes are made
-to contents of the source directory.
-
-**NOTE:** Please make sure you type the `quit` command to stop the development
-server. Pressing Control-C causes unclean exit, leaving the temporary directory
-not removed.
+<blockquote class="note">
+  <header>NOTE</header>
+  <p> Please make sure you type the <code>quit</code> command to stop the
+  development server. Pressing Control-C causes unclean exit, leaving the
+  temporary directory not removed.</p>
+</blockquote>
 
 ### `help` &mdash; Shows the Help Message
 
