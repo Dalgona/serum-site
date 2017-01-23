@@ -15,7 +15,25 @@ package depending on your operating system.
     * For Linux-based OS: `inotify-tools`
     * For macOS: Install `fsevent_watch` with brew
 
-## Obtaining and Building Serum
+## Getting Serum
+
+### The Easiest Way
+
+From Elixir 1.4, you can now install Serum in _one_ step. Simply execute the
+command below:
+
+```
+% mix escript.install github Dalgona/Serum
+```
+
+The escript will be installed under `~/.mix/escripts` directory. Append this
+directory to your `PATH` environment variable to easily invoke Serum with
+`serum` command.
+
+### Still an Easy Way
+
+You can still manually fetch the source code and build Serum. Follow the steps
+below:
 
 1. Use `git` to clone the repository.
 
