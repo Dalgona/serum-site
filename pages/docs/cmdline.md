@@ -54,6 +54,12 @@ set to) a valid Serum project directory.
     this option is not supplied, Serum will build the website into
     `</path/to/project>/site` directory by default.
 
+    <blockquote class="note">
+      <header>NOTE</header>
+      <p>Hidden files starting with `'.'` are preserved, as they may contain
+      important data, such as Git repository information.</p>
+    </blockquote>
+
 ### `server` &mdash; The Serum Development Server
 
 ```
