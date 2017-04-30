@@ -9,11 +9,9 @@ directory.  Each template file is an _Embedded Elixir(EEx)_ files. Please read
 [the official EEx documentation](http://elixir-lang.org/docs/stable/eex/) for
 more information about EEx.
 
-## Helper Functions
+## Global Variables
 
-There are some accessor and helper functions for use in templates, which are
-listed below. You will need to utilize these functions to make templates that
-really work.
+These are variables you can use in any template files.
 
 ### `site_name/0`
 
@@ -48,6 +46,11 @@ returns the value of `author` field in `serum.json` file.
 
 returns the email address of website author specified in `serum.json` file.
 
+## Helper Macros
+
+There are some accessor and helper macros for use in templates, which are listed
+below. You will need to utilize these macros to make templates that really work.
+
 ### `base/1`
 
 ```lang-markup
@@ -58,9 +61,9 @@ returns the email address of website author specified in `serum.json` file.
 Prepends the base URL in front of the specified path.
 
 This is the most basic way to reference files and path, but it's more
-recommended to use the other helper functions below whenever possible, as each
-of those functions does more specific jobs. This function should be used only
-when all of the other helpers don't satisfy your needs.
+recommended to use the other helper macros below whenever possible, as each
+of those macros does more specific jobs. This function should be used only when
+all of the other helpers don't satisfy your needs.
 
 ### `page/1`
 
@@ -73,8 +76,8 @@ when all of the other helpers don't satisfy your needs.
 <!-- ==> /base/url/docs/.html (may be an undesired output) -->
 ```
 
-This is a shortcut function for accessing pages. Please note that you should
-not put `.html` at the end of the path, and passing a directory as an argument
+This is a shortcut macro for accessing pages. Please note that you should not
+put `.html` at the end of the path, and passing a directory as an argument
 produces a wrong output.
 
 ### `post/1`
@@ -84,7 +87,7 @@ produces a wrong output.
 <!-- ==> /base/url/posts/2016-11-20-1937-some-post.html -->
 ```
 
-This shortcut function helps accessing blog posts. Like `page/1`, you shouldn't
+This shortcut macro helps accessing blog posts. Like `page/1`, you shouldn't
 append `.html` to the name of a post.
 
 ### `asset/1`
@@ -94,32 +97,17 @@ append `.html` to the name of a post.
 <!-- ==> /base/url/assets/js/script.js -->
 ```
 
-Use this function whenever you need to reference an asset. Calling
-`asset("path")` is equivalent to calling `base("/base/url/assets/path")`.
+Use this macro whenever you need to reference an asset. Calling `asset("path")`
+is equivalent to calling `base("/base/url/assets/path")`.
 
 <blockquote class="note">
-  <header>NOTE 1</header>
-  <p>You may have noticed that there is no helper function for accessing media
+  <header>NOTE</header>
+  <p>You may have noticed that there is no helper macro for accessing media
   files. This is intended because media files are supposed to be used in
   <i>some</i> pages or blog posts. You can, still, access those files by using
-  <code>base/1</code> function, but in that case you really need to consider
+  <code>base/1</code> macro, but in that case you really need to consider
   moving those files into <code>assets/</code> directory.</p>
 </blockquote>
-
-<blockquote class="note">
-  <header>NOTE 2</header>
-  <p>Since Elixir 1.4, calling zero-arity functions without parentheses will
-  cause warnings.</p>
-</blockquote>
-
-```lang-markup
-<!-- OK -->
-<%= base() %>
-<%= author_email() %>
-<!-- Still OK, but with warnings -->
-<%= base %>
-<%= author_email %>
-```
 
 <!-- TODO: add helper for tag index -->
 
