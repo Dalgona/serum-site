@@ -21,7 +21,7 @@ directory. This is just for your convenience, therefore you are free to change
 the inner directory structure to fit your needs.
 
 You can reference any assets from any template by using `asset/1` template
-helper function.
+helper macro.
 
 ```html
 <!-- Example: -->
@@ -34,6 +34,6 @@ your assets.
 <blockquote class="note">
   <header>NOTE</header>
   <p>You can also refer to any media files in templates by using
-  <code>base/1</code> function. However, it's not recommended to do this because
+  <code>base/1</code> macro. However, it's not recommended to do this because
   media files are intended to be used in a specific page or blog post.</p>
 </blockquote>
