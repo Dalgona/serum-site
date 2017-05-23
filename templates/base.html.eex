@@ -13,7 +13,7 @@
         <h1><a href="<%= base() %>"><%= site_name %></a></h1>
         <p><%= site_description %></p>
       </header>
-      <nav><%= navigation %></nav>
+      <nav><%= include "nav" %></nav>
       <hr>
       <main><%= contents %></main>
       <hr>

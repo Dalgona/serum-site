@@ -1,4 +1,6 @@
-# The Command-line Program
+===
+title: The Command-line Program
+===
 
 [Back to the index](%pages:docs/index)
 

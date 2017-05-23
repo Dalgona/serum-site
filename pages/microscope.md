@@ -1,4 +1,6 @@
-# Microscope
+===
+title: Microscope
+===
 
 # The Microscope Project
 

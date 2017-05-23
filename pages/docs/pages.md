@@ -1,4 +1,6 @@
-# Adding Pages to Your Website
+===
+title: Adding Pages to Your Website
+===
 
 [Back to the index](%pages:docs/index)
 

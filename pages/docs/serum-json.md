@@ -1,4 +1,6 @@
-# The serum.json File
+===
+title: The serum.json File
+===
 
 [Back to the index](%pages:docs/index)
 
