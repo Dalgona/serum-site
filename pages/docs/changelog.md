@@ -1,4 +1,6 @@
-# Serum Changelog
+===
+title: Serum Changelog
+===
 
 # Serum Changelog
 

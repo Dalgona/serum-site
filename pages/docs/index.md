@@ -1,4 +1,6 @@
-# Documentation Index
+===
+title: Documentation Index
+===
 
 # Serum Documentation
 

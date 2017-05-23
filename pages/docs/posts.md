@@ -1,4 +1,6 @@
-# Writing Blog Posts
+===
+title: Writing Blog Posts
+===
 
 [Back to the index](%pages:docs/index)
 
