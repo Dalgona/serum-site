@@ -15,47 +15,49 @@ more information about EEx.
 
 These are variables you can use in any template files.
 
-### `site_name/0`
+### `site_name`
 
 ```lang-markup
-<%= site_name() %>
+<%= site_name %>
 ```
 
 returns the name of the website, which are specified in `serum.json` file.
 
-### `site_description/0`
+### `site_description`
 
 ```lang-markup
-<%= site_description() %>
+<%= site_description %>
 ```
 
 returns the description (or subtitle) of the website, which are specified
 in `serum.json` file.
 
-### `author/0`
+### `author`
 
 ```lang-markup
-<%= author() %>
+<%= author %>
 ```
 
 returns the value of `author` field in `serum.json` file.
 
-### `author_email/0`
+### `author_email`
 
 ```lang-markup
-<%= author_email() %>
+<%= author_email %>
 ```
 
 returns the email address of website author specified in `serum.json` file.
 
 ## Helper Macros
 
-There are some accessor and helper macros for use in templates, which are listed
-below. You will need to utilize these macros to make templates that really work.
+There are some helper macros for use in templates. You will need to utilize
+these macros to make templates that really work.
 
-### `base/1`
+### `base/0` and `base/1`
 
 ```lang-markup
+<%= base() %>
+<!-- ==> /base/url/ -->
 <%= base "assets/css/style.css" %>
 <!-- ==> /base/url/assets/css/style.css -->
 ```
@@ -89,7 +91,7 @@ produces a wrong output.
 <!-- ==> /base/url/posts/2016-11-20-1937-some-post.html -->
 ```
 
-This shortcut macro helps accessing blog posts. Like `page/1`, you shouldn't
+This shortcut macro helps accessing blog posts. Like `page/1`, you should not
 append `.html` to the name of a post.
 
 ### `asset/1`
@@ -111,6 +113,10 @@ is equivalent to calling `base("/base/url/assets/path")`.
   moving those files into <code>assets/</code> directory.</p>
 </blockquote>
 
+### `include/1`
+
+See [Includes](%pages:docs/includes).
+
 <!-- TODO: add helper for tag index -->
 
 ## List of Required Templates
@@ -121,9 +127,9 @@ can be used.
 
 ### `templates/base.html.eex`
 
-<svg width="490" viewBox="0 0 490 330" style="background:white">
+<svg width="490" viewBox="0 0 490 270" style="background:white">
   <g transform="translate(5,5)">
-    <rect x="0" y="0" width="480" height="320" style="stroke:#c04078;stroke-width:2px;fill:none"></rect>
+    <rect x="0" y="0" width="480" height="260" style="stroke:#c04078;stroke-width:2px;fill:none"></rect>
     <rect x="0" y="0" width="480" height="30" style="stroke:none;fill:#c04078"></rect>
     <text x="10" y="20" style="fill:white;font-family:Inconsolata">&lt;%= page_title %&gt;</text>
     <g style="opacity:0.5" transform="translate(405,5)">
@@ -140,20 +146,13 @@ can be used.
       </text>
     </g>
     <g transform="translate(10,130)">
-      <rect width="460" height="50" style="stroke:none;fill:rgba(0,0,0,0.1)"></rect>
-      <text y="20">
-        <tspan x="5" style="opacity:0.5">Global Navigation Area</tspan>
-        <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;%= navigation %&gt;</tspan>
-      </text>
-    </g>
-    <g transform="translate(10,190)">
       <rect width="460" height="80" style="stroke:none;fill:rgba(0,0,0,0.1)"></rect>
       <text y="20">
         <tspan x="5" style="opacity:0.5">Main Contents Area</tspan>
         <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;%= contents %&gt;</tspan>
       </text>
     </g>
-    <g transform="translate(10,280)">
+    <g transform="translate(10,220)">
       <rect width="460" height="30" style="stroke:none;fill:rgba(0,0,0,0.1)"></rect>
       <text y="20">
         <tspan x="5" style="opacity:0.5">Site Footer</tspan>
@@ -184,51 +183,13 @@ variables specific to this template, which are:
     replaced by the rendered result of `page.html.eex`, `list.html.eex`, or
     `post.html.eex`.
 
-### `templates/nav.html.eex`
-
-<svg width="490" viewBox="0 0 490 250" style="background:white">
-  <g transform="translate(5,5)">
-    <rect x="0" y="0" width="480" height="240" style="stroke:#c0c0c0;stroke-width:2px;fill:none"></rect>
-    <rect x="0" y="0" width="480" height="30" style="stroke:none;fill:#c0c0c0"></rect>
-    <g style="opacity:0.5" transform="translate(405,5)">
-      <rect x="0" y="0" width="20" height="20" style="stroke:none;fill:white"></rect>
-      <rect x="25" y="0" width="20" height="20" style="stroke:none;fill:white"></rect>
-      <rect x="50" y="0" width="20" height="20" style="stroke:none;fill:white"></rect>
-    </g>
-    <g transform="translate(10,40)">
-      <rect width="460" height="30" style="stroke:none;fill:rgba(0,0,0,0.1)"></rect>
-      <text y="20">
-        <tspan x="5" style="opacity:0.5">Site Header</tspan>
-      </text>
-    </g>
-    <g transform="translate(10,80)">
-      <rect x="0.5" y="0.5" width="459" height="69" style="stroke:#c04078;fill:rgba(192,64,120,0.3)"></rect>
-      <text y="20">
-        <tspan x="5" style="fill:#c04078;font-weight:bold">Global Navigation Area</tspan>
-        <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;%= base &quot;...&quot; %&gt;</tspan>
-        <tspan x="5" dy="1.2em" style="font-family:Inconsolata">&lt;%= page &quot;...&quot; %&gt;</tspan>
-      </text>
-    </g>
-    <g transform="translate(10,160)">
-      <rect width="460" height="30" style="stroke:none;fill:rgba(0,0,0,0.1)"></rect>
-      <text y="20">
-        <tspan x="5" style="opacity:0.5">Main Contents Area</tspan>
-      </text>
-    </g>
-    <g transform="translate(10,200)">
-      <rect width="460" height="30" style="stroke:none;fill:rgba(0,0,0,0.1)"></rect>
-      <text y="20">
-        <tspan x="5" style="opacity:0.5">Site Footer</tspan>
-      </text>
-    </g>
-  </g>
-</svg>
+<!-- ### `templates/nav.html.eex`
 
 Defines the appearance of the global navigation area. You can place some
 hyperlinks to pages here. It's safe to rely on this template for now, but
 later, this template will be superseded by "Includes", which is the
 generalization of this template and the more flexible way to compose your
-templates.
+templates.-->
 
 ### `templates/page.html.eex`
 
@@ -406,4 +367,3 @@ places:
 * `contents`
 
     The HTML code converted from the source markdown file.
-
