@@ -39,51 +39,38 @@ Followings are examples of valid source file names:
 
 ## Providing Metadata
 
-The first two lines of each markdown file are reserved for the post metadata.
-In the first line is the title of the post, and in the next line is a list of
-tags delimited by a comma (`,`). These two lines must start with a pound sign
-directly followed by a space (`'# '`).
+At the beginning of each post source file, you need to write the post header
+to define metadata of each post. The format of header area can be found in
+[Adding Pages to Your Website](%pages:docs/pages) documentation. Currently there
+are two post metadata you can define:
 
-Following is an example of a valid source markdown file:
+* `title` (string, required)
+
+    Defines the title of the blog post. This title will be displayed in the
+    title bar of a web browser and post listings.
+
+* `tags` (comma-separated strings, *optional*)
+
+    Defines one or more tags.
+
+Following is an example of a valid source markdown file. Note that Serum doesn't
+care about spaces between a comma and tags.
 
 ```language-markdown
-# About GenServer in Elixir
-# elixir,otp,study
+===
+title: About GenServer in Elixir
+tags: elixir,otp, study , foo
+===
 
 Lorem ipsum dolor sit amet ...
 ```
 
-Serum doesn't care about spaces between a comma and the next tag, so below is
-also a valid tag line:
+If you want to leave a post untagged, just drop the `tags: ...` line.
 
 ```language-markdown
-# elixir, otp, study
-```
-
-Even if a post is not supposed to have any tag, you should leave the pound sign
-in the second line. In this case, the trailing space right after the pound sign
-is not required.
-
-So this markdown file is valid:
-
-```language-markdown
-# My First Post!
-#
+===
+title: About GenServer in Elixir
+===
 
 Lorem ipsum dolor sit amet ...
 ```
-
-While this one is _invalid_:
-
-```language-markdown
-# My First Post!
-
-Lorem ipsum dolor sit amet ...
-```
-
-<blockquote class="note">
-  <header>NOTE</header>
-  <p>Although the first two lines of source markdown files look like "Heading 1"
-  block, this part is not parsed as a markdown code. Every special character you
-  put in here will be displayed as is.</p>
-</blockquote>
