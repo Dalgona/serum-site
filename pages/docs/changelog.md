@@ -4,6 +4,12 @@ title: Serum Changelog
 
 # Serum Changelog
 
+## May 2017
+
+* Changed the syntax of markdown header.
+* Introduced "includes" templates.
+* Internal change: Serum now uses 2-pass building process.
+
 ## April 2017
 
 * Serum now catches some errors occurring in template rendering procedure.
