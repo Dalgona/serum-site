@@ -17,16 +17,22 @@ filename extensions. Although almost all HTML files are accepted by markdown
 processor, it is recommended to save HTML documents as HTML file because the
 extra procedure of markdown processing can be skipped.
 
-For successful build, you need to provide metadata in the first line of every
-page source files. This special one line is neither processed by the markdown
-processor nor displayed on web browsers, but it can be used to set text
-displayed in the title bar of web browsers. The first line of each source file
-must contain a pound sign and a space (`"# "`) at the very beginning of the
-line, and the title of the page after those two characters. Below is an example
-of valid page source file.
+For successful build, you need to provide metadata at the beginning of every
+page source files. The beginning and the end of each page header are delimited
+by a `===` line, and between these two lines, each metadata is defined in a line
+in the form of `<key>: <value>`. Currently, there is only one metadata you can
+define:
+
+* `title` (string, required)
+
+    Defines the text displayed in the title bar of a web browser.
+
+Below is an example of a valid page source file.
 
 ```lang-markdown
-# Welcome to My Website
+===
+title: Welcome to My Website
+===
 
 ... contents (in markdown or HTML) ...
 ```
