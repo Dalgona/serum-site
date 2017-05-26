@@ -115,7 +115,7 @@ is equivalent to calling `base("/base/url/assets/path")`.
 
 ### `include/1`
 
-See [Includes](%pages:docs/includes).
+See [Includable Templates](%pages:docs/includes).
 
 <!-- TODO: add helper for tag index -->
 
