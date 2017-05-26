@@ -13,6 +13,7 @@ not enough, the full source code for this website itself is also provided on
 * [Adding Pages to Your Website](%pages:docs/pages)
 * [Writing Blog Posts](%pages:docs/posts)
 * [Templates](%pages:docs/templates)
+* [Includable Templates](%pages:docs/includes)
 * [Assets and Media](%pages:docs/assets-media)
 * [Special Syntax for Markdown](%pages:docs/md-specials)
 
