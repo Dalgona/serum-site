@@ -1,6 +1,6 @@
-===
+---
 title: Writing Blog Posts
-===
+---
 
 [Back to the index](%pages:docs/index)
 
@@ -57,10 +57,10 @@ Following is an example of a valid source markdown file. Note that Serum doesn't
 care about spaces between a comma and tags.
 
 ```language-markdown
-===
+---
 title: About GenServer in Elixir
 tags: elixir,otp, study , foo
-===
+---
 
 Lorem ipsum dolor sit amet ...
 ```
@@ -68,9 +68,9 @@ Lorem ipsum dolor sit amet ...
 If you want to leave a post untagged, just drop the `tags: ...` line.
 
 ```language-markdown
-===
+---
 title: About GenServer in Elixir
-===
+---
 
 Lorem ipsum dolor sit amet ...
 ```
