@@ -6,6 +6,7 @@ title: Serum Changelog
 
 ## May 2017
 
+* Fixed excessive CPU usage issue when running Serum development server.
 * Changed the syntax of markdown header.
 * Introduced "includes" templates.
 * Internal change: Serum now uses 2-pass building process.
