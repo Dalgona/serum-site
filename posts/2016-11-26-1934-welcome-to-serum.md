@@ -1,7 +1,7 @@
-===
+---
 title: Welcome to Serum!
 tags: sample, demo, dev
-===
+---
 
 This is a sample blog post.
 

@@ -1,6 +1,6 @@
-===
+---
 title: Assets and Media
-===
+---
 
 [Back to the index](%pages:docs/index)
 

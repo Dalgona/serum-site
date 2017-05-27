@@ -1,6 +1,6 @@
-===
+---
 title: Welcome
-===
+---
 
 Welcome to the official website of **Serum**, a simple static website generator!
 

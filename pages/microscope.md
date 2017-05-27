@@ -1,6 +1,6 @@
-===
+---
 title: Microscope
-===
+---
 
 # The Microscope Project
 

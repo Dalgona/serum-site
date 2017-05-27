@@ -1,6 +1,6 @@
-===
+---
 title: Includable Templates
-===
+---
 
 [Back to the index](%pages:docs/index)
 

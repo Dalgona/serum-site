@@ -1,6 +1,6 @@
-===
+---
 title: Special Syntax for Markdown
-===
+---
 
 [Back to the index](%pages:docs/index)
 

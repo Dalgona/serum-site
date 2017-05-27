@@ -1,6 +1,6 @@
-===
+---
 title: Adding Pages to Your Website
-===
+---
 
 [Back to the index](%pages:docs/index)
 
@@ -19,7 +19,7 @@ extra procedure of markdown processing can be skipped.
 
 For successful build, you need to provide metadata at the beginning of every
 page source files. The beginning and the end of each page header are delimited
-by a `===` line, and between these two lines, each metadata is defined in a line
+by a `---` line, and between these two lines, each metadata is defined in a line
 in the form of `<key>: <value>`. Currently, there is only one metadata you can
 define:
 
@@ -30,9 +30,9 @@ define:
 Below is an example of a valid page source file.
 
 ```lang-markdown
-===
+---
 title: Welcome to My Website
-===
+---
 
 ... contents (in markdown or HTML) ...
 ```
