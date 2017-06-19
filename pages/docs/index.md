@@ -1,5 +1,8 @@
 ---
 title: Documentation Index
+label: Docs
+group: main-menu
+order: 4
 ---
 
 # Serum Documentation

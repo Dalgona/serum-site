@@ -1,5 +1,7 @@
 ---
 title: Microscope
+group: main-menu
+order: 3
 ---
 
 # The Microscope Project
