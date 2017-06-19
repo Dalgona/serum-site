@@ -1,5 +1,8 @@
 ---
 title: Welcome
+label: Home
+group: main-menu
+order: 1
 ---
 
 Welcome to the official website of **Serum**, a simple static website generator!

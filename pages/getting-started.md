@@ -1,5 +1,7 @@
 ---
 title: Getting Started
+group: main-menu
+order: 2
 ---
 
 # Getting Started
