@@ -1,0 +1,25 @@
+---
+title: Documentation Index
+label: Docs
+group: main-menu
+order: 4
+---
+
+<h1>Serum Documentation</h1>
+
+These documents below are complete manual of Serum. For those who think it's
+not enough, the full source code for this website itself is also provided on
+<a href="https://github.com/Dalgona/serum-site/">GitHub</a>.
+
+<ul>
+  <%= for p <- pages, p.group == "docs" do %>
+    <li><a href="<%= p.url %>"><%= p.title %></a></li>
+  <% end %>
+</ul>
+
+<h1>Changelogs</h1>
+
+Serum is still in early development stage, so many things can change in short
+period of time.
+
+<a href="<%= page "docs/changelog" %>">View Changelog</a>

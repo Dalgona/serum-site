@@ -1,5 +1,7 @@
 ---
 title: The serum.json File
+group: docs
+order: 2
 ---
 
 [Back to the index](%pages:docs/index)

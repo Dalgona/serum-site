@@ -1,5 +1,7 @@
 ---
 title: Special Syntax for Markdown
+group: docs
+order: 8
 ---
 
 [Back to the index](%pages:docs/index)

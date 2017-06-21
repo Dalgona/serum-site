@@ -1,13 +1,15 @@
 ---
 title: Templates
+group: docs
+order: 5
 ---
 
 [Back to the index](%pages:docs/index)
 
 # Templates
 
-Serum provides five templates you need to define under the `templates`
-directory.  Each template file is an _Embedded Elixir(EEx)_ files. Please read
+Serum provides four templates you need to define under the `templates`
+directory. Each template file is an _Embedded Elixir(EEx)_ files. Please read
 [the official EEx documentation](http://elixir-lang.org/docs/stable/eex/) for
 more information about EEx.
 
@@ -21,7 +23,7 @@ These are variables you can use in any template files.
 <%= site_name %>
 ```
 
-returns the name of the website, which are specified in `serum.json` file.
+Returns the name of the website, which are specified in `serum.json` file.
 
 ### `site_description`
 
@@ -29,7 +31,7 @@ returns the name of the website, which are specified in `serum.json` file.
 <%= site_description %>
 ```
 
-returns the description (or subtitle) of the website, which are specified
+Returns the description (or subtitle) of the website, which are specified
 in `serum.json` file.
 
 ### `author`
@@ -38,7 +40,7 @@ in `serum.json` file.
 <%= author %>
 ```
 
-returns the value of `author` field in `serum.json` file.
+Returns the value of `author` field in `serum.json` file.
 
 ### `author_email`
 
@@ -46,7 +48,51 @@ returns the value of `author` field in `serum.json` file.
 <%= author_email %>
 ```
 
-returns the email address of website author specified in `serum.json` file.
+Returns the email address of website author specified in `serum.json` file.
+
+### `pages`
+
+```
+<%= for p <- pages do %>
+  ...
+<% end %>
+```
+
+Returns the list of all pages in the website. This can be useful when you make
+a navigation area or an index page. Each item in this list is a _page object_.
+
+Refer to the [Objects Reference](%pages:docs/objects) to learn more about page
+objects.
+
+### `posts`
+
+```
+<%= for p <- posts do %>
+  ...
+<% end %>
+```
+
+Returns the list of all blog posts, sorted by date in descending order. You can
+use this if you want to make another post listings, besides the auto-generated
+ones. Each item in this list is a _post object_.
+
+Refer to the [Objects Reference](%pages:docs/objects) to learn more about post
+objects.
+
+### `tags`
+
+```
+<%= for p <- tags do %>
+  ...
+<% end %>
+```
+
+Returns the list of all tags existing in the website. Each item in this list is
+a tuple with two elements `{tag, count}`, where `tag` is a _tag object_ and
+`count` is the number of blog posts which have this tag.
+
+Refer to the [Objects Reference](%pages:docs/objects) to learn more about tag
+objects.
 
 ## Helper Macros
 
@@ -173,23 +219,11 @@ variables specific to this template, which are:
     The text displayed in the title bar of the web browser. This is usually
     expanded into the title of a page or a blog post.
 
-* `navigation`
-
-    This variable is replaced by the rendered result of `nav.html.eex`.
-
 * `contents`
 
     Represents the main contents area. Depending on the type of the page, it's
     replaced by the rendered result of `page.html.eex`, `list.html.eex`, or
     `post.html.eex`.
-
-<!-- ### `templates/nav.html.eex`
-
-Defines the appearance of the global navigation area. You can place some
-hyperlinks to pages here. It's safe to rely on this template for now, but
-later, this template will be superseded by "Includes", which is the
-generalization of this template and the more flexible way to compose your
-templates.-->
 
 ### `templates/page.html.eex`
 
@@ -287,19 +321,10 @@ appropriate position:
 
 * `posts`
 
-    An enumerable of maps containing post metadata, sorted by date in
-    descending order. Following is the list of keys and description of values.
-
-    * `url`: URL of this blog post
-      (e.g., `/base/url/posts/YYYY-MM-DD-hhmm-post.html`)
-    * `title`: Title of this blog post
-    * `date`: Formatted representation of date when this post has been written
-    * `tags`: An enumerable containing tag information
-
-    Each item in `tags` enumerable is also a map. Its keys are:
-
-    * `list_url`: URL of the list of posts with this tag.
-    * `name`: Name of this tag.
+    A list of _post objects_, sorted by date in descending order. Read
+    [Objects Reference](%pages:docs/objects) for more information about post
+    objects. This list may contain all posts in the website, or some posts
+    filtered by a tag.
 
 ### `templates/post.html.eex`
 
@@ -348,11 +373,11 @@ places:
 
 * `title`
 
-    Title of this blog post.
+    The title of this blog post.
 
 * `date`
 
-    Formatted string representation of date when this post has been written.
+    The string representation of date when this post has been written.
 
 * `raw_date`
 
@@ -361,8 +386,8 @@ places:
 
 * `tags`
 
-    An enumerable containg tag information. Please see the description for
-    `list.html.eex` above for detailed description on this variable.
+    A list of _tag objects_. Please see [Objects Reference](%pages:docs/objects)
+    for more information about tag objects.
 
 * `contents`
 
