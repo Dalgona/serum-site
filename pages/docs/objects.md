@@ -36,7 +36,8 @@ with following keys:
   to construct `<date>` HTML tags.
 * `tags`: The list of tags the post has. See _Tag Object_ section below for more
   information.
-* `preview_text`: The first portion of the blog post.
+* `preview_text`: The first portion of the blog post, without HTML tags.
+* `html`: The full contents of the blog post, in HTML format.
 * `url`: The URL of the blog post.
 
 ## Tag Object

@@ -72,9 +72,9 @@ objects.
 <% end %>
 ```
 
-Returns the list of all blog posts. You can use this if you want to make another
-post listings, besides the auto-generated ones. Each item in this list is a
-_post object_.
+Returns the list of all blog posts, sorted by date in descending order. You can
+use this if you want to make another post listings, besides the auto-generated
+ones. Each item in this list is a _post object_.
 
 Refer to the [Objects Reference](%pages:docs/objects) to learn more about post
 objects.
@@ -219,23 +219,11 @@ variables specific to this template, which are:
     The text displayed in the title bar of the web browser. This is usually
     expanded into the title of a page or a blog post.
 
-* `navigation`
-
-    This variable is replaced by the rendered result of `nav.html.eex`.
-
 * `contents`
 
     Represents the main contents area. Depending on the type of the page, it's
     replaced by the rendered result of `page.html.eex`, `list.html.eex`, or
     `post.html.eex`.
-
-<!-- ### `templates/nav.html.eex`
-
-Defines the appearance of the global navigation area. You can place some
-hyperlinks to pages here. It's safe to rely on this template for now, but
-later, this template will be superseded by "Includes", which is the
-generalization of this template and the more flexible way to compose your
-templates.-->
 
 ### `templates/page.html.eex`
 
@@ -333,19 +321,10 @@ appropriate position:
 
 * `posts`
 
-    An enumerable of maps containing post metadata, sorted by date in
-    descending order. Following is the list of keys and description of values.
-
-    * `url`: URL of this blog post
-      (e.g., `/base/url/posts/YYYY-MM-DD-hhmm-post.html`)
-    * `title`: Title of this blog post
-    * `date`: Formatted representation of date when this post has been written
-    * `tags`: An enumerable containing tag information
-
-    Each item in `tags` enumerable is also a map. Its keys are:
-
-    * `list_url`: URL of the list of posts with this tag.
-    * `name`: Name of this tag.
+    A list of _post objects_, sorted by date in descending order. Read
+    [Objects Reference](%pages:docs/objects) for more information about post
+    objects. This list may contain all posts in the website, or some posts
+    filtered by a tag.
 
 ### `templates/post.html.eex`
 
@@ -394,11 +373,11 @@ places:
 
 * `title`
 
-    Title of this blog post.
+    The title of this blog post.
 
 * `date`
 
-    Formatted string representation of date when this post has been written.
+    The string representation of date when this post has been written.
 
 * `raw_date`
 
@@ -407,8 +386,8 @@ places:
 
 * `tags`
 
-    An enumerable containg tag information. Please see the description for
-    `list.html.eex` above for detailed description on this variable.
+    A list of _tag objects_. Please see [Objects Reference](%pages:docs/objects)
+    for more information about tag objects.
 
 * `contents`
 
