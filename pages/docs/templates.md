@@ -59,14 +59,10 @@ Returns the email address of website author specified in `serum.json` file.
 ```
 
 Returns the list of all pages in the website. This can be useful when you make
-a navigation area or an index page. Each item in this list is a struct with
-following keys:
+a navigation area or an index page. Each item in this list is a _page object_.
 
-* `title`: The title of the page.
-* `label`: The name (label) of the page.
-* `group`: The name of group the page belongs to. Can be `nil`.
-* `order`: The order in which this page appears in its `group`.
-* `url`: The URL of the page.
+Refer to the [Objects Reference](%pages:docs/objects) to learn more about page
+objects.
 
 ### `posts`
 
@@ -78,19 +74,10 @@ following keys:
 
 Returns the list of all blog posts. You can use this if you want to make another
 post listings, besides the auto-generated ones. Each item in this list is a
-struct with following keys:
+_post object_.
 
-* `title`: The title of the post.
-* `date`: The string representation of the date when the post is written. See
-  [The `serum.json` File](%pages:docs/serum-json) document to see how this
-  property is generated.
-* `raw_date`: The tuple containing the date information in the form of
-  `{{year, month, day}, {hour, minute, second}}`. You may need this if you want
-  to construct `<date>` HTML tags.
-* `tags`: The list of tags the post has. See `tags` section below for more
-  information.
-* `preview_text`: The first portion of the blog post.
-* `url`: The URL of the blog post.
+Refer to the [Objects Reference](%pages:docs/objects) to learn more about post
+objects.
 
 ### `tags`
 
@@ -99,6 +86,13 @@ struct with following keys:
   ...
 <% end %>
 ```
+
+Returns the list of all tags existing in the website. Each item in this list is
+a tuple with two elements `{tag, count}`, where `tag` is a _tag object_ and
+`count` is the number of blog posts which have this tag.
+
+Refer to the [Objects Reference](%pages:docs/objects) to learn more about tag
+objects.
 
 ## Helper Macros
 
