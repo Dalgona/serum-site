@@ -1,5 +1,7 @@
 ---
 title: Adding Pages to Your Website
+group: docs
+order: 3
 ---
 
 [Back to the index](%pages:docs/index)

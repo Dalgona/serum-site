@@ -1,5 +1,7 @@
 ---
 title: Writing Blog Posts
+group: docs
+order: 4
 ---
 
 [Back to the index](%pages:docs/index)

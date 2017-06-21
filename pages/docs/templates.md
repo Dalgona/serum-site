@@ -1,5 +1,7 @@
 ---
 title: Templates
+group: docs
+order: 5
 ---
 
 [Back to the index](%pages:docs/index)
