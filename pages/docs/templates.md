@@ -8,8 +8,8 @@ order: 5
 
 # Templates
 
-Serum provides five templates you need to define under the `templates`
-directory.  Each template file is an _Embedded Elixir(EEx)_ files. Please read
+Serum provides four templates you need to define under the `templates`
+directory. Each template file is an _Embedded Elixir(EEx)_ files. Please read
 [the official EEx documentation](http://elixir-lang.org/docs/stable/eex/) for
 more information about EEx.
 
@@ -23,7 +23,7 @@ These are variables you can use in any template files.
 <%= site_name %>
 ```
 
-returns the name of the website, which are specified in `serum.json` file.
+Returns the name of the website, which are specified in `serum.json` file.
 
 ### `site_description`
 
@@ -31,7 +31,7 @@ returns the name of the website, which are specified in `serum.json` file.
 <%= site_description %>
 ```
 
-returns the description (or subtitle) of the website, which are specified
+Returns the description (or subtitle) of the website, which are specified
 in `serum.json` file.
 
 ### `author`
@@ -40,7 +40,7 @@ in `serum.json` file.
 <%= author %>
 ```
 
-returns the value of `author` field in `serum.json` file.
+Returns the value of `author` field in `serum.json` file.
 
 ### `author_email`
 
@@ -48,7 +48,57 @@ returns the value of `author` field in `serum.json` file.
 <%= author_email %>
 ```
 
-returns the email address of website author specified in `serum.json` file.
+Returns the email address of website author specified in `serum.json` file.
+
+### `pages`
+
+```
+<%= for p <- pages do %>
+  ...
+<% end %>
+```
+
+Returns the list of all pages in the website. This can be useful when you make
+a navigation area or an index page. Each item in this list is a struct with
+following keys:
+
+* `title`: The title of the page.
+* `label`: The name (label) of the page.
+* `group`: The name of group the page belongs to. Can be `nil`.
+* `order`: The order in which this page appears in its `group`.
+* `url`: The URL of the page.
+
+### `posts`
+
+```
+<%= for p <- posts do %>
+  ...
+<% end %>
+```
+
+Returns the list of all blog posts. You can use this if you want to make another
+post listings, besides the auto-generated ones. Each item in this list is a
+struct with following keys:
+
+* `title`: The title of the post.
+* `date`: The string representation of the date when the post is written. See
+  [The `serum.json` File](%pages:docs/serum-json) document to see how this
+  property is generated.
+* `raw_date`: The tuple containing the date information in the form of
+  `{{year, month, day}, {hour, minute, second}}`. You may need this if you want
+  to construct `<date>` HTML tags.
+* `tags`: The list of tags the post has. See `tags` section below for more
+  information.
+* `preview_text`: The first portion of the blog post.
+* `url`: The URL of the blog post.
+
+### `tags`
+
+```
+<%= for p <- tags do %>
+  ...
+<% end %>
+```
 
 ## Helper Macros
 
