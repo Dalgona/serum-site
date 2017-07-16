@@ -4,6 +4,8 @@ group: docs
 order: 9
 ---
 
+[Back to the index](%page:docs/index)
+
 # Objects Reference
 
 This document describes various objects provided by Serum.
@@ -19,7 +21,7 @@ following keys:
 * `order`: The order in which this page appears in its `group`.
 * `url`: The URL of the page.
 
-Read [Adding Pages to Your Website](%pages:docs/pages) document for more
+Read [Adding Pages to Your Website](%page:docs/pages) document for more
 information about "group" and "order."
 
 ## Post Object
@@ -29,7 +31,7 @@ with following keys:
 
 * `title`: The title of the post.
 * `date`: The string representation of the date when the post is written. See
-  [The `serum.json` File](%pages:docs/serum-json) document to see how this
+  [The `serum.json` File](%page:docs/serum-json) document to see how this
   property is generated.
 * `raw_date`: The tuple containing the date information in the form of
   `{{year, month, day}, {hour, minute, second}}`. You may need this if you want

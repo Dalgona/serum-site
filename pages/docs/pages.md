@@ -4,7 +4,7 @@ group: docs
 order: 3
 ---
 
-[Back to the index](%pages:docs/index)
+[Back to the index](%page:docs/index)
 
 # Adding Pages to Your Website
 
@@ -21,7 +21,7 @@ Although almost all HTML codes are accepted by markdown processor, it is
 recommended to save HTML documents as HTML file because the extra procedure of
 markdown processing can be skipped. When you are writing pages in EEx, you can
 utilize all of template helpers and variables described in
-[Templates](%pages:docs/templates) document.
+[Templates](%page:docs/templates) document.
 
 For successful build, you need to provide metadata at the beginning of every
 page source files. The beginning and the end of each page header are delimited

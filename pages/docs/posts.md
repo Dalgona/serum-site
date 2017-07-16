@@ -4,7 +4,7 @@ group: docs
 order: 4
 ---
 
-[Back to the index](%pages:docs/index)
+[Back to the index](%page:docs/index)
 
 # Writing Blog Posts
 
@@ -28,7 +28,7 @@ YYYY-MM-DD-<title-slug>.md
 
 At the beginning of each post source file, you need to write the post header
 to define metadata of each post. The format of the header area can be found in
-[Adding Pages to Your Website](%pages:docs/pages) document. Currently there are
+[Adding Pages to Your Website](%page:docs/pages) document. Currently there are
 three post metadata you can define:
 
 * `title` (string, required)

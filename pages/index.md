@@ -16,7 +16,7 @@ way to create awesome static websites with _little_ effort.
 ## Getting Started
 
 Feeling interested? If you want to try Serum, please read the [Getting Started
-Guide](%pages:getting-started).
+Guide](%page:getting-started).
 
 ## Contribution
 

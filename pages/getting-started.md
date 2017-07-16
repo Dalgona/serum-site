@@ -89,6 +89,6 @@ before publishing it.
 
 Congratulations! Yet it looks empty, you have successfully created and built
 your first website with Serum. Now continue reading
-[documentations](%pages:docs/index) to customize your project and fill your
+[documentations](%page:docs/index) to customize your project and fill your
 website with your own contents.
 
