@@ -4,7 +4,7 @@ group: docs
 order: 5
 ---
 
-[Back to the index](%pages:docs/index)
+[Back to the index](%page:docs/index)
 
 # Templates
 
@@ -61,7 +61,7 @@ Returns the email address of website author specified in `serum.json` file.
 Returns the list of all pages in the website. This can be useful when you make
 a navigation area or an index page. Each item in this list is a _page object_.
 
-Refer to the [Objects Reference](%pages:docs/objects) to learn more about page
+Refer to the [Objects Reference](%page:docs/objects) to learn more about page
 objects.
 
 ### `posts`
@@ -76,7 +76,7 @@ Returns the list of all blog posts, sorted by date in descending order. You can
 use this if you want to make another post listings, besides the auto-generated
 ones. Each item in this list is a _post object_.
 
-Refer to the [Objects Reference](%pages:docs/objects) to learn more about post
+Refer to the [Objects Reference](%page:docs/objects) to learn more about post
 objects.
 
 ### `tags`
@@ -91,7 +91,7 @@ Returns the list of all tags existing in the website. Each item in this list is
 a tuple with two elements `{tag, count}`, where `tag` is a _tag object_ and
 `count` is the number of blog posts which have this tag.
 
-Refer to the [Objects Reference](%pages:docs/objects) to learn more about tag
+Refer to the [Objects Reference](%page:docs/objects) to learn more about tag
 objects.
 
 ## Helper Macros
@@ -161,7 +161,7 @@ is equivalent to calling `base("/base/url/assets/path")`.
 
 ### `include/1`
 
-See [Includable Templates](%pages:docs/includes).
+See [Includable Templates](%page:docs/includes).
 
 <!-- TODO: add helper for tag index -->
 
@@ -322,7 +322,7 @@ appropriate position:
 * `posts`
 
     A list of _post objects_, sorted by date in descending order. Read
-    [Objects Reference](%pages:docs/objects) for more information about post
+    [Objects Reference](%page:docs/objects) for more information about post
     objects. This list may contain all posts in the website, or some posts
     filtered by a tag.
 
@@ -386,7 +386,7 @@ places:
 
 * `tags`
 
-    A list of _tag objects_. Please see [Objects Reference](%pages:docs/objects)
+    A list of _tag objects_. Please see [Objects Reference](%page:docs/objects)
     for more information about tag objects.
 
 * `contents`

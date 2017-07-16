@@ -4,7 +4,7 @@ group: docs
 order: 1
 ---
 
-[Back to the index](%pages:docs/index)
+[Back to the index](%page:docs/index)
 
 # The Command-line Program
 

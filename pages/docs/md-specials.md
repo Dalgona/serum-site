@@ -4,7 +4,7 @@ group: docs
 order: 8
 ---
 
-[Back to the index](%pages:docs/index)
+[Back to the index](%page:docs/index)
 
 # Special Syntax for Markdown
 
@@ -27,13 +27,13 @@ markdown files to reference pages or media files without worrying about the
 base URL:
 
 ```lang-markdown
-* [Documentation](%pages:docs/index)
-* [My First Post](%posts:YYYY-MM-DD-hhmm-first-post)
+* [Documentation](%page:docs/index)
+* [My First Post](%post:YYYY-MM-DD-hhmm-first-post)
 
 ![Logo](%media:logo.png)
 ```
 
 This code is quite self-explanatory. The only one thing you need to remember
-is that you should not append ".html" at the end when using `%pages:` or
-`%posts:` notation.
+is that you should not append ".html" at the end when using `%page:` or
+`%post:` notation.
 

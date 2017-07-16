@@ -30,7 +30,7 @@ related to end-user experiences, though.)
 * Added `raw_date` post info variable.
 * Now tags are displayed in alphabetical order.
 * A new variable `raw_date` has been added to `post.html.eex` template. Read
-    [&quot;Templates&quot;](%pages:docs/templates) to learn more.
+    [&quot;Templates&quot;](%page:docs/templates) to learn more.
 * Format the codes so that warnings won't be generated in Elixir 1.4 and above.
 * Site build will be aborted if the system timezone is not set.
 * Improve error handling
