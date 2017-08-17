@@ -27,12 +27,17 @@ provided by the Serum command-line program.
 
 The `init` task initializes a new Serum project into the given `directory`.
 If the target directory does not exist, that directory will be automatically
-created. If the target directory already exists, the new project will still be
-created, but the warning will be printed out as this might overwrite some
-existing files.
+created. If the target directory already exists and is not empty, Serum will
+refuse to create a new project. Use `-f (--force)` option to create a new
+project anyway.
 
 If the `directory` argument is not passed, Serum will try to initialize a new
 project into your current working directory.
+
+#### Options
+
+* `-f` or `--force`<br>
+    Forces the initialization of new project on a non-empty directory.
 
 ### `build` &mdash; Builds a Project
 
@@ -100,9 +105,18 @@ the server by typing commands. Available commands are:
 ### `help` &mdash; Shows the Help Message
 
 ```
-% serum help
+% serum help [task]
 ```
 
-This task is self-explanatory. It prints summary of all tasks and options
-available.
+If executed without any argument, the `help` task prints summary of all tasks.
+If you want to read detailed explanation about a specific task, give the name of
+the task as an argument (e.g. `serum help build`).
 
+## Exit Status
+
+The command-line program reports one of these exit status code depending on the
+result of the task:
+
+* `0` &mdash; The task has been completed normally.
+* `1` &mdash; An error occurred while running the task.
+* `2` &mdash; There is a problem in the command-line argument.
