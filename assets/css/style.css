@@ -187,6 +187,26 @@ span.tags a.tag { padding: 0 5px; }
 span.tags a.tag:first-child { padding-left: 0; }
 span.tags a.tag:last-child { padding-right: 0; }
 
+table {
+  border: 1px solid #ddd;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 5px 11px;
+}
+
+table th {
+  border-bottom-width: 2px;
+}
+
+table tr:nth-of-type(2n) td {
+  background: whitesmoke;
+}
+
 @media screen and (max-width: 899px) {
   nav ul li {
     display: block;
