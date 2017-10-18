@@ -38,8 +38,8 @@ three post metadata you can define:
 
 * `date` (date and time, required)
 
-    Defines the date and time when the post is written. The only accepted format
-    is `YYYY-MM-DD hh:mm:ss`.
+    Defines the date and time when the post is written. The accepted formats
+    are `YYYY-MM-DD hh:mm:ss` and `YYYY-MM-DD`.
 
 * `tags` (comma-separated strings, *optional*)
 
