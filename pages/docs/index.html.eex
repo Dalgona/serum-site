@@ -12,7 +12,7 @@ not enough, the full source code for this website itself is also provided on
 <a href="https://github.com/Dalgona/serum-site/">GitHub</a>.
 
 <ul>
-  <%= for p <- pages, p.group == "docs" do %>
+  <%= for p <- @all_pages, p.group == "docs" do %>
     <li><a href="<%= p.url %>"><%= p.title %></a></li>
   <% end %>
 </ul>

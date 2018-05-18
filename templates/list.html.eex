@@ -1,8 +1,8 @@
 <article class="list">
-  <header><h1><%= header %></h1></header>
+  <header><h1><%= @page.title %></h1></header>
   <div>
     <ul>
-      <%= for x <- posts do %>
+      <%= for x <- @all_posts do %>
         <li class="article">
           <h2>
             <a href="<%= x.url %>"><%= x.title %></a><br>
@@ -18,7 +18,6 @@
               </span>
             <% end %>
           </p>
-          <p class="post-preview"><%= x.preview_text %></p></a>
         </li>
       <% end %>
     </ul>
