@@ -7,6 +7,12 @@ order: 4
 
 <h1>Serum Documentation</h1>
 
+<blockquote class="note">
+  <header>NOTE</header>
+  <p>These docs are now obsolete and may not be referenced. The whole new docs
+  are being worked on from scratch. We apologize for the inconvenience.</p>
+</blockquote>
+
 These documents below are complete manual of Serum. For those who think it's
 not enough, the full source code for this website itself is also provided on
 <a href="https://github.com/Dalgona/serum-site/">GitHub</a>.
@@ -16,10 +22,3 @@ not enough, the full source code for this website itself is also provided on
     <li><a href="<%= p.url %>"><%= p.title %></a></li>
   <% end %>
 </ul>
-
-<h1>Changelogs</h1>
-
-Serum is still in early development stage, so many things can change in short
-period of time.
-
-<a href="<%= page "docs/changelog" %>">View Changelog</a>
