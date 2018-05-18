@@ -8,23 +8,29 @@ order: 2
 
 ## Requirement
 
-* Elixir 1.4 or newer
+* Elixir 1.4 or newer on UNIX-based OS
 
     Please visit [the official Elixir website](http://elixir-lang.org) for
     installation instructions.
 
-* To enable the automatic rebuild feature, you need to install an external
-package depending on your operating system.
+    Serum has never been tested on the native Win32 build of Erlang runtime,
+    therefore it won't work well on that platform. If you need to work on
+    Microsoft Windows, please install Serum on Windows Subsystem for Linux
+    (WSL), which comes with the latest version of Windows 10.
 
-    * For Linux-based OS: `inotify-tools`
-    * For macOS: Install `fsevent_watch` with brew
+* To enable the automatic rebuild feature, you'll need to install an external
+  package depending on your operating system.
+
+    * For Linux-based OS (including WSL): Install `inotify-tools` with the
+      package manager provided by your Linux distribution.
+    * For macOS: Install `fsevent_watch` with brew.
 
 ## Getting Serum
 
-### The Easiest Way
+### Automatic Installation
 
-From Elixir 1.4, you can now install Serum in _one_ step. Simply execute the
-command below:
+From Elixir 1.4, you can now install Serum in one step. Execute the command
+below in your shell:
 
 ```
 % mix escript.install github Dalgona/Serum
@@ -34,17 +40,18 @@ The escript will be installed under `~/.mix/escripts` directory. Append this
 directory to your `PATH` environment variable to easily invoke Serum with
 `serum` command.
 
-### Still an Easy Way
+### Manually Building Serum
 
-You can still manually fetch the source code and build Serum. Follow the steps
-below:
+You can manually fetch the source code and build Serum. Follow the steps below:
 
 1. Use `git` to clone the repository.
 
-        % git clone https://github.com/Dalgona/Serum.git
+    ```
+    % git clone https://github.com/Dalgona/Serum.git
+    ```
 
-2. Type `make` to automatically fetch the dependencies and build Serum escript.
-If the build succeeded, you will see `serum` executable in the PWD.
+2. Run `make` to automatically fetch the dependencies and build Serum escript.
+If the build succeeds, you will see `serum` executable in the PWD.
 
 3. (Optional) Execute `make install` to copy the program into `/usr/local/bin/`
 directory, so that you can use Serum from anywhere.
@@ -52,26 +59,32 @@ directory, so that you can use Serum from anywhere.
 ## My First Website
 
 Once you have successfully installed Serum, you can create and test your first
-website with a few keystrokes.
+website in a few minutes.
 
-1. Execute `serum init [directory]` to create a new Serum project.
+1. Run `serum init [directory]` to create a new Serum project.
 
-        % serum init /path/to/project
+    ```
+    % serum init /path/to/project
+    ```
 
 2. CD into your project directory and type `serum build` to build your project.
 
-        % cd /path/to/project
-        % serum build
+    ```
+    % cd /path/to/project
+    % serum build
+    ```
 
     When the build completes, the root of your website will be created under
     `/path/to/project/site` directory. Copy the contents of this directory to
     your own www directory, or upload them to the external web hosting service.
 
-3. Or, you can just test your project right away by running `serum server`.
-The Serum development server is useful when you need to check your website
-before publishing it.
+3. Or, you can test your project right away by running `serum server`.  The
+Serum development server is useful when you need to check your website before
+publishing it.
 
-        % serum server --port <port>
+    ```
+    % serum server --port <port>
+    ```
 
     <blockquote class="note">
       <header>NOTE 1</header>
@@ -85,10 +98,8 @@ before publishing it.
       development server.</p>
     </blockquote>
 
-4. Open a web brower and navigate to your website. That's it!
+4. Open a web brower and navigate to your website (i.e. `http://localhost`).
 
-Congratulations! Yet it looks empty, you have successfully created and built
-your first website with Serum. Now continue reading
-[documentations](%page:docs/index) to customize your project and fill your
-website with your own contents.
-
+Congratulations! Yet it looks empty, you have successfully built your first
+website with Serum. Now continue reading [documentations](%page:docs/index) to
+customize your project and fill your website with your own contents.
