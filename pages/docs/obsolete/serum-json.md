@@ -1,6 +1,6 @@
 ---
 title: The serum.json File
-group: docs
+group: docs_obsolete
 order: 2
 ---
 

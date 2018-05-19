@@ -1,6 +1,6 @@
 ---
 title: Templates
-group: docs
+group: docs_obsolete
 order: 5
 ---
 

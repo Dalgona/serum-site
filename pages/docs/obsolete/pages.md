@@ -1,6 +1,6 @@
 ---
 title: Adding Pages to Your Website
-group: docs
+group: docs_obsolete
 order: 3
 ---
 

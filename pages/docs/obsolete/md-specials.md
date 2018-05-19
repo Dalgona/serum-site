@@ -1,6 +1,6 @@
 ---
 title: Special Syntax for Markdown
-group: docs
+group: docs_obsolete
 order: 8
 ---
 

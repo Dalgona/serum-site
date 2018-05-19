@@ -1,6 +1,6 @@
 ---
 title: Objects Reference
-group: docs
+group: docs_obsolete
 order: 9
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Assets and Media
-group: docs
+group: docs_obsolete
 order: 7
 ---
 

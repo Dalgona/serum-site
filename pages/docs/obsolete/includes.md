@@ -1,6 +1,6 @@
 ---
 title: Includable Templates
-group: docs
+group: docs_obsolete
 order: 6
 ---
 

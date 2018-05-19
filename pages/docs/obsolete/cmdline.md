@@ -1,6 +1,6 @@
 ---
 title: The Command-line Program
-group: docs
+group: docs_obsolete
 order: 1
 ---
 

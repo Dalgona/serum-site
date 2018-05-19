@@ -1,6 +1,6 @@
 ---
 title: Writing Blog Posts
-group: docs
+group: docs_obsolete
 order: 4
 ---
 
