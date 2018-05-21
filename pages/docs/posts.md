@@ -1,20 +1,19 @@
 ---
 title: Writing Blog Posts
-group: docs_obsolete
-order: 4
+group: docs
+order: 5
 ---
 
 [Back to the index](%page:docs/index)
 
 # Writing Blog Posts
 
-Serum is a blog-aware static website generator and it provides an easy way to
-write blog posts.
+Serum processes blog posts differently compared to other pages, so that posts
+have additional features such as tagging, list generation, etc.
 
-All blog post source files should be located under `posts` subdirectory of your
+Source files for blog posts should be saved under `posts` directory in your
 project directory. File name is not important to Serum, but it is recommended to
-name your files like below, for a pretty directory listing when you are working.
-If you don't care, that's fine.
+name your files like below for pretty directory listings.
 
 ```
 YYYY-MM-DD-<title-slug>.md
@@ -31,17 +30,17 @@ to define metadata of each post. The format of the header area can be found in
 [Adding Pages to Your Website](%page:docs/pages) document. Currently there are
 three post metadata you can define:
 
-* `title` (string, required)
+* `title` (string, **required**)
 
     Defines the title of the blog post. This title will be displayed in the
     title bar of a web browser and post listings.
 
-* `date` (date and time, required)
+* `date` (date and time, **required**)
 
     Defines the date and time when the post is written. The accepted formats
     are `YYYY-MM-DD hh:mm:ss` and `YYYY-MM-DD`.
 
-* `tags` (comma-separated strings, *optional*)
+* `tags` (comma-separated strings, optional)
 
     Defines one or more tags.
 
@@ -68,3 +67,10 @@ date: 2017-06-15 13:27:00
 
 Lorem ipsum dolor sit amet ...
 ```
+
+## Automatic Post Generation
+
+You can generate a new blog post by running `serum newpost` task. You need to
+be in a valid Serum project directory, that is, the `serum.json` file must
+be present under your shell's current working directory. Run `serum help
+newpost` for the detailed help message.
