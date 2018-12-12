@@ -1,6 +1,6 @@
 ---
 title: Assets and Media
-group: docs_obsolete
+group: docs
 order: 7
 ---
 
@@ -32,7 +32,7 @@ helper macro.
 <link rel="stylesheet" href="<%= asset "css/style.css" %>">
 ```
 
-By doing this, you can avoid hard-coding the full URL in every reference to
+By doing so, you can avoid hard-coding the full URL in every reference to
 your assets.
 
 <blockquote class="note">
