@@ -30,7 +30,8 @@ Below is an example of the project definition file:
   "list_title_all": "All Posts",
   "list_title_tag": "Posts Tagged \"~s\"",
   "pagination": true,
-  "posts_per_page": 10
+  "posts_per_page": 10,
+  "preview_length": 200
 }
 ```
 
@@ -103,3 +104,12 @@ Below is an example of the project definition file:
 
     Default values of `pagination` and `posts_per_page` are `false` and `5`,
     respectively.
+
+* `preview_length` (integer, optional)
+
+    A non-negative integer which sets the maximum number of characters in the
+    preview text of each blog post. Defaults to `200`.
+
+    It is recommended to explicitly set this property to zero if you are not
+    going to use preview texts, as by doing so some unnecessary HTML processing
+    can be skipped.

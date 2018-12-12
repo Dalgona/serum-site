@@ -98,7 +98,7 @@ publishing it.
       development server.</p>
     </blockquote>
 
-4. Open a web brower and navigate to your website (i.e. `http://localhost`).
+4. Open a web browser and navigate to your website (i.e. `http://localhost`).
 
 Congratulations! Yet it looks empty, you have successfully built your first
 website with Serum. Now continue reading [documentations](%page:docs/index) to
