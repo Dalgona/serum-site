@@ -1,6 +1,6 @@
 ---
 title: Special Syntax for Markdown
-group: docs_obsolete
+group: docs
 order: 8
 ---
 
@@ -15,7 +15,7 @@ this:
 
 ```lang-markdown
 * [Documentation](/base/url/docs/index.html)
-* [My First Post](/base/url/posts/YYYY-MM-DD-hhmm-first-post.html)
+* [My First Post](/base/url/posts/YYYY-MM-DD-first-post.html)
 
 ![Logo](/base/url/media/logo.png)
 ```
@@ -28,7 +28,7 @@ base URL:
 
 ```lang-markdown
 * [Documentation](%page:docs/index)
-* [My First Post](%post:YYYY-MM-DD-hhmm-first-post)
+* [My First Post](%post:YYYY-MM-DD-first-post)
 
 ![Logo](%media:logo.png)
 ```
