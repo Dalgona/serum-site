@@ -1,6 +1,6 @@
 ---
 title: Includable Templates
-group: docs_obsolete
+group: docs
 order: 6
 ---
 
@@ -29,7 +29,7 @@ name the template `includes/nav.html.eex`, and its content would look like this:
 </nav>
 ```
 
-You can now "include" this includable template in other templates, such as
+You can now include this template in other templates, such as
 `templates/base.html.eex`, by using `include/1` template helper macro.
 
 ```
