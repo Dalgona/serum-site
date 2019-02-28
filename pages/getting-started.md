@@ -6,9 +6,9 @@ order: 2
 
 # Getting Started
 
-## Requirement
+## Requirements
 
-* Elixir 1.4 or newer on UNIX-based OS
+* Elixir 1.6 or newer on UNIX-based OS
 
     Please visit [the official Elixir website](http://elixir-lang.org) for
     installation instructions.
@@ -25,66 +25,51 @@ order: 2
       package manager provided by your Linux distribution.
     * For macOS: Install `fsevent_watch` with brew.
 
-## Getting Serum
+## Installing Serum
 
-### Automatic Installation
-
-From Elixir 1.4, you can now install Serum in one step. Execute the command
-below in your shell:
+First, run the following command in your shell to install the Serum installer
+archive under your home directory.
 
 ```
-% mix escript.install github Dalgona/Serum
+$ mix archive.install hex serum_new
 ```
 
-The escript will be installed under `~/.mix/escripts` directory. Append this
-directory to your `PATH` environment variable to easily invoke Serum with
-`serum` command.
-
-### Manually Building Serum
-
-You can manually fetch the source code and build Serum. Follow the steps below:
-
-1. Use `git` to clone the repository.
-
-    ```
-    % git clone https://github.com/Dalgona/Serum.git
-    ```
-
-2. Run `make` to automatically fetch the dependencies and build Serum escript.
-If the build succeeds, you will see `serum` executable in the PWD.
-
-3. (Optional) Execute `make install` to copy the program into `/usr/local/bin/`
-directory, so that you can use Serum from anywhere.
+Now, you can create a new Serum project using `mix serum.new` command
+from anywhere.
 
 ## My First Website
 
-Once you have successfully installed Serum, you can create and test your first
-website in a few minutes.
+Now you can create and test your first website in a few minutes.
 
-1. Run `serum init [directory]` to create a new Serum project.
-
-    ```
-    % serum init /path/to/project
-    ```
-
-2. CD into your project directory and type `serum build` to build your project.
+1. Run `mix serum.new <PATH>` to create a new Serum project.
 
     ```
-    % cd /path/to/project
-    % serum build
+    $ mix serum.new /path/to/project
     ```
 
-    When the build completes, the root of your website will be created under
-    `/path/to/project/site` directory. Copy the contents of this directory to
-    your own www directory, or upload them to the external web hosting service.
+2. Enter your project directory and install Serum into your new project.
 
-3. Or, you can test your project right away by running `serum server`.  The
+    ```
+    $ cd /path/to/project
+    $ mix do deps.get, deps.compile
+    ```
+
+3. Try building your new website with `serum.build` Mix task. Unless the `-o`
+   option is given, the website will be built at `/path/to/project/site`.
+
+    ```
+    $ mix serum.build
+    ```
+
+4. Or, you can test your project right away by running `serum.server`. The
 Serum development server is useful when you need to check your website before
 publishing it.
 
     ```
-    % serum server --port <port>
+    $ mix serum.server [--port <PORT>]
     ```
+
+    Open a web browser and navigate to your website (i.e. `http://localhost`).
 
     <blockquote class="note">
       <header>NOTE 1</header>
@@ -97,8 +82,6 @@ publishing it.
       <p>Always type `quit` command instead of pressing Control-C to quit the
       development server.</p>
     </blockquote>
-
-4. Open a web browser and navigate to your website (i.e. `http://localhost`).
 
 Congratulations! Yet it looks empty, you have successfully built your first
 website with Serum. Now continue reading [documentations](%page:docs/index) to
