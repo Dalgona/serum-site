@@ -19,13 +19,6 @@ for more information.
 
 ## Features
 
-These are the key features Microscope currently supports:
-
-* **Response compression**
-
-    Microscope compresses the contents of a response using gzip if
-    Content-Length is below 32768 bytes.
-
 * **Automatic index generation**
 
     Microscope generates and sends a fallback "Index of" page which contains a
