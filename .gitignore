@@ -3,4 +3,6 @@ site
 *.swo
 .DS_Store
 
+_build/
+deps/
 build
