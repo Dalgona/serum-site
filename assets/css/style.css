@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Lato:100,900|Open+Sans:400,700|Inconsolata:400,700';
+@import 'https://fonts.googleapis.com/css?family=Lato:100,900|Open+Sans:400,700';
 
 body {
   margin: 0;
@@ -71,7 +71,7 @@ footer {
 footer p { margin: 0.5rem 0; }
 
 code {
-  font-family: 'Inconsolata';
+  font-family: 'monospace';
   color: #c04078;
 }
 
@@ -82,7 +82,6 @@ pre code {
   border-left: 4px solid #ddd;
   color: #333;
   background: whitesmoke;
-  line-height: 1rem;
 }
 
 h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
