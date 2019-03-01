@@ -8,30 +8,31 @@ order: 2
 
 # Project Structure
 
-Every time you create a new Serum project by running `serum init` task, the
-following directories and files are created.
+When you create a new Serum project by running `mix serum.new`, the following
+directories and files are created.
 
 ```
 /path/to/project
-    serum.json
-    pages/
-        index.md
-    posts/
-    templates/
-        base.html.eex
-        list.html.eex
-        page.html.eex
-        post.html.eex
-    includes/
-        nav.html.eex
-    assets/
-        css/
-        js/
-        images/
-    media/
+├── serum.exs (or serum.json)
+├── pages/
+│   └── index.md
+├── posts/
+├── templates/
+│   ├── base.html.eex
+│   ├── list.html.eex
+│   ├── page.html.eex
+│   └── post.html.eex
+├── includes/
+│   └── nav.html.eex
+├── assets/
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── media/
+└── mix.exs
 ```
 
-## `serum.json`
+## `serum.exs` (or `serum.json`)
 
 This file indicates that the containing directory is a Serum project. And it
 contains various metadata and options which are used while Serum builds the
@@ -55,9 +56,8 @@ any blog post.
 
 ## `templates` Directory
 
-Templates define overall layout structure of your website. There are four
-templates you must define. [Templates](%page:docs/templates) document describes
-each of them.
+Templates define overall layout of your website. There are four templates you
+must define. [Templates](%page:docs/templates) document describes each of them.
 
 ## `includes` Directory
 
@@ -79,3 +79,12 @@ Media files are static files which are referenced by a few pages or blog posts,
 such as pictures, video clips, audio files, etc. You may remove this directory
 if none of your pages or blog posts uses media files. Read
 [Assets and Media](%page:docs/asset_media) document for more information.
+
+## `mix.exs`
+
+A Serum project is also a Mix project. You need to keep this file in order to
+install and use Serum. You will also need this file to manage dependencies for
+your own codes.
+
+Note that some files or directories may be created by Mix to store dependencies
+and build artifacts.
