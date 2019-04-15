@@ -5,14 +5,14 @@ defmodule SerumSite.MixFile do
     [
       app: :serum_site,
       version: "0.9.0",
-      elixir: "~> 1.6",
+      elixir: ">= 1.7.0",
       deps: deps()
     ]
   end
 
   defp deps do
     [
-      {:serum, "~> 0.9.0"}
+      {:serum, "~> 0.11.0"}
     ]
   end
 end
