@@ -67,10 +67,3 @@ date: 2017-06-15 13:27:00
 
 Lorem ipsum dolor sit amet ...
 ```
-
-## Automatic Post Generation
-
-You can generate a new blog post by running `serum newpost` task. You need to
-be in a valid Serum project directory, that is, the `serum.json` file must
-be present under your shell's current working directory. Run `serum help
-newpost` for the detailed help message.

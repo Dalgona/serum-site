@@ -64,10 +64,3 @@ order: 1
 
 ... contents ...
 ```
-
-## Automatic Page Generation
-
-You can generate a new page by running `serum newpage` task. You need to be in
-a valid Serum project directory, that is, the `serum.json` file must exist in
-your shell's current working directory. Run `serum help newpage` to read the
-help message of this task.
