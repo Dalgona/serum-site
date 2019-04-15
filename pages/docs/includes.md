@@ -1,7 +1,7 @@
 ---
 title: Includable Templates
 group: docs
-order: 6
+order: 7
 ---
 
 [Back to the index](%page:docs/index)

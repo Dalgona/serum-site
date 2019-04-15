@@ -1,7 +1,7 @@
 ---
 title: Assets and Media
 group: docs
-order: 7
+order: 8
 ---
 
 [Back to the index](%page:docs/index)
