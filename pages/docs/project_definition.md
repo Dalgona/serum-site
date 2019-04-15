@@ -8,30 +8,37 @@ order: 3
 
 # Project Definition
 
-Every Serum project has a file named `serum.json` right under the project's
+Every Serum project has a file named `serum.exs` right under the project's
 root directory. This file indicates that the containing directory is a Serum
 project directory, and it contains various metadata and options which are used
 while Serum builds the project. This document describes how to configure your
-own `serum.json` file properly.
+own `serum.exs` file properly.
 
 ## Properties
 
-Below is an example of the project definition file:
+Below is an example of `serum.exs`. Note that the code in this file must be
+evaluated to a map.
 
-```lang-javascript
-{
-  "site_name": "Serum",
-  "site_description": "A simple static website generator",
-  "author": "John Doe",
-  "author_email": "john.doe@example.com",
-  "base_url": "/~john/sample/",
+```lang-elixir
+%{
+  site_name: "Serum",
+  site_description: "A simple static website generator",
+  author: "John Doe",
+  author_email: "john.doe@example.com",
+  base_url: "/~john/sample/",
+  server_root: "https://example.com",
 
-  "date_format": "{D} {Mshort} {YYYY}",
-  "list_title_all": "All Posts",
-  "list_title_tag": "Posts Tagged \"~s\"",
-  "pagination": true,
-  "posts_per_page": 10,
-  "preview_length": 200
+  date_format: "{D} {Mshort} {YYYY}",
+  list_title_all: "All Posts",
+  list_title_tag: "Posts Tagged \"~s\"",
+  pagination: true,
+  posts_per_page: 10,
+  preview_length: 200,
+
+  plugins: [
+    Serum.Plugins.TableOfContents,
+    {Serum.Plugins.LiveReloader, only: :dev}
+  ]
 }
 ```
 
@@ -57,11 +64,16 @@ Below is an example of the project definition file:
 
     The root path of the website on the web server. For example, if
     you want to make the front page of the website accessible from
-    `http://example.com/~user/site1/`, you must set this property to
+    `https://example.com/~user/site1/`, you must set this property to
     `/~user/site1/`.
 
-    Make sure you append a slash  (`/`) at the end of the value,
-    or build will fail with a JSON validation error.
+    Make sure you append a slash (`/`) at the end of the value, or build will
+    fail with a validation error.
+
+* `server_root` (string, optional)
+
+    This is useful when you need to build an absolute URL of a page. It must
+    start with `http://` or `https://`.
 
 ### Blog Configuration
 
@@ -88,13 +100,6 @@ Below is an example of the project definition file:
     string, as this is the placeholder for tag name. If you need to display
     `~` character in pages, insert `~~` (two consecutive tildes).
 
-    <blockquote class="note">
-      <header>NOTE</header>
-      <p>`list_title_all` and `list_title_tag` properties will be removed in
-      the future. You can still format the list title in the template
-      (<code>templates/list.html.eex</code>).
-    </blockquote>
-
 * `pagination` (boolean, optional)<br>
   `posts_per_page` (integer, optional)
 
@@ -113,3 +118,13 @@ Below is an example of the project definition file:
     It is recommended to explicitly set this property to zero if you are not
     going to use preview texts, as by doing so some unnecessary HTML processing
     can be skipped.
+
+### Miscellaneous
+
+- `plugins` (list, optional)
+
+    Plugins extend the functionality of Serum by altering source data,
+    intermediate data, or final outputs during the build process. Read
+    [Using Serum Plugins](%page:docs/plugins) for more information about how
+    to set this property. If you are interested in creating your own plugin,
+    see [Creating a Serum Plugin](%page:docs/plugin-dev).
