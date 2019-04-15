@@ -8,15 +8,17 @@ order: 2
 
 ## Requirements
 
-* Elixir 1.6 or newer on UNIX-based OS
+* Elixir 1.7.0 or newer
 
     Please visit [the official Elixir website](http://elixir-lang.org) for
     installation instructions.
 
-    Serum has never been tested on the native Win32 build of Erlang runtime,
-    therefore it won't work well on that platform. If you need to work on
-    Microsoft Windows, please install Serum on Windows Subsystem for Linux
-    (WSL), which comes with the latest version of Windows 10.
+* UNIX-based operating system
+
+    Serum has never been tested on the native Windows build of Erlang runtime,
+    so there is no guarantee that Serum will work well on Windows. If you need
+    to work on Microsoft Windows, please install Serum on Windows Subsystem for
+    Linux (WSL), which comes with the latest version of Windows 10.
 
 * To enable the automatic rebuild feature, you'll need to install an external
   package depending on your operating system.
