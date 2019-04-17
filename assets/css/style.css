@@ -201,6 +201,26 @@ table tr:nth-of-type(2n) td {
   background: whitesmoke;
 }
 
+ul.serum-toc {
+  display: inline-block;
+  margin: 0;
+  padding: 0.25em 0.5em;
+  border: 1px solid whitesmoke;
+  list-style-type: none;
+}
+
+ul.serum-toc li.indent-0 { margin-left: 0em; }
+ul.serum-toc li.indent-1 { margin-left: 1em; }
+ul.serum-toc li.indent-2 { margin-left: 2em; }
+ul.serum-toc li.indent-3 { margin-left: 3em; }
+ul.serum-toc li.indent-4 { margin-left: 4em; }
+ul.serum-toc li.indent-5 { margin-left: 5em; }
+
+ul.serum-toc li span.number {
+  color: #333;
+  margin-right: 0.5em;
+}
+
 @media screen and (max-width: 899px) {
   nav ul li {
     display: block;
