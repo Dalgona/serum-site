@@ -12,7 +12,9 @@ Once you have installed Serum locally in your project, you now have the access
 to Serum's functionalities through Mix tasks. Use these Mix tasks to build,
 test, and manage your Serum project.
 
-## `serum` &mdash; Prints all Serum Tasks
+<div><serum-toc start="2" end="2"></serum-toc></div>
+
+## `serum` - Prints all Serum Tasks
 
 ```
 $ mix serum
@@ -26,7 +28,7 @@ for example, run `mix help serum.build`.
 
 - - -
 
-## `serum.new` &mdash; Creates a New Serum Project
+## `serum.new` - Creates a New Serum Project
 
 ```
 $ mix serum.new [--force] <PATH>
@@ -61,7 +63,7 @@ files and directories are created during the initialization process.
 
 - - -
 
-## `serum.build` &mdash; Builds the Current Serum Project
+## `serum.build` - Builds the Current Serum Project
 
 ```
 $ mix serum.build [(-o|--output) PATH]
@@ -84,7 +86,7 @@ control-related data.
 
 - - -
 
-## `serum.server` &mdash; Starts the Development Server
+## `serum.server` - Starts the Development Server
 
 ```
 $ mix serum.server [(-p|--port) PORT]
@@ -105,9 +107,9 @@ starts the development server. The server uses the port `8080` by default.
 Once the development server has successfully started, you can interact with
 the server by typing commands. Available commands are:
 
-* `build` &mdash; Rebuilds current project.
+* `build` - Rebuilds current project.
 
-* `quit` &mdash; Stops the development server and quit.
+* `quit` - Stops the development server and quit.
 
     <blockquote class="note">
       <header>NOTE</header>
@@ -118,7 +120,7 @@ the server by typing commands. Available commands are:
 
 - - -
 
-## `serum.gen.page` &mdash; Adds a New Page
+## `serum.gen.page` - Adds a New Page
 
 ```
 $ mix serum.gen.page (-t|--title) TITLE (-o|--output) OUTPUT [Options]
@@ -151,7 +153,7 @@ $ mix serum.gen.page (-t|--title) TITLE (-o|--output) OUTPUT [Options]
 
 - - -
 
-## `serum.gen.post` &mdash; Adds a New Blog Post
+## `serum.gen.post` - Adds a New Blog Post
 
 ```
 $ mix serum.gen.post (-t|--title) TITLE (-o|--output) OUTPUT [Options]
