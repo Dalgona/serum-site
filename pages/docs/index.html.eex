@@ -16,17 +16,3 @@ enough, the full source code for this website itself is also provided on
     <li><a href="<%= p.url %>"><%= p.title %></a></li>
   <% end %>
 </ul>
-
-<h2>Obsolete Documentation</h2>
-
-<blockquote class="note">
-  <header>NOTE</header>
-  <p>These docs are now obsolete and may not be referenced. The whole new docs
-  are being worked on from scratch. We apologize for the inconvenience.</p>
-</blockquote>
-
-<ul>
-  <%= for p <- @all_pages, p.group == "docs_obsolete" do %>
-    <li><a href="<%= p.url %>"><%= p.title %></a></li>
-  <% end %>
-</ul>
