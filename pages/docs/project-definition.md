@@ -124,7 +124,8 @@ evaluated to a map.
 - `plugins` (list, optional)
 
     Plugins extend the functionality of Serum by altering source data,
-    intermediate data, or final outputs during the build process. Read
-    [Using Serum Plugins](%page:docs/plugins) for more information about how
-    to set this property. If you are interested in creating your own plugin,
-    see [Creating a Serum Plugin](%page:docs/plugin-dev).
+    intermediate data, or final outputs during the build process.
+
+    The documentation for [`Serum.Plugin`
+    module](https://hexdocs.pm/serum/Serum.Plugin.html) describes what Serum
+    plugins are, how to use them, and how to create your own Serum plugin.
