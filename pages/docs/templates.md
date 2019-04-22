@@ -85,7 +85,6 @@ customize its values by editing the
     label: "Home",
     group: "main-menu",
     order: "1",
-    images: ["/Serum/media/logo.png"],
     url: "/Serum/index.html"
   },
   ...
@@ -119,10 +118,6 @@ navigation list or a table of contents.
       %{name: "Tag1", list_url: "/Serum/tags/Tag1/"},
       %{name: "Tag3", list_url: "/Serum/tags/Tag3/"}
     ],
-    images: [
-      "/Serum/media/my-first-post/image1.jpg",
-      "/Serum/media/my-first-post/image2.jpg"
-    ]
     url: "/Serum/posts/2019-04-18-my-first-post.html"
   },
   ...
@@ -175,9 +170,10 @@ the moment, and may not be available in some templates.
 #### `@page` - Current Page
 
 The `@page` variable contains a metadata of the page being rendered. When
-rendering a page or a blog post, the type of its value is the same as the type
-of an element of [`@all_pages`](#s_2.1.2) or an element of
-[`@all_posts`](#s_2.1.3).
+rendering a page or a blog post, the type of its value is almost the same as
+the type of an element of [`@all_pages`](#s_2.1.2) or an element of
+[`@all_posts`](#s_2.1.3), but there is additional `:images` key, which value
+is a list of URLs of images used inside the page or the blog post.
 
 When rendering a blog post list, its value looks like the following:
 
@@ -193,6 +189,7 @@ When rendering a blog post list, its value looks like the following:
   title: "Posts tagged \"Tag1\"",
   posts: [ ... ],
   url: "/Serum/tags/Tag1/page-2.html",
+  images: [],
 
   # This is set to `nil` if current_page == 1.
   prev_url: "/Serum/tags/Tag1/page-1.html",
