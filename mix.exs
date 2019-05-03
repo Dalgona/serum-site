@@ -4,7 +4,7 @@ defmodule SerumSite.MixFile do
   def project do
     [
       app: :serum_site,
-      version: "0.9.0",
+      version: "1.0.0",
       elixir: ">= 1.7.0",
       deps: deps()
     ]
@@ -12,7 +12,7 @@ defmodule SerumSite.MixFile do
 
   defp deps do
     [
-      {:serum, "~> 0.12.0"}
+      {:serum, "~> 1.0"}
     ]
   end
 end
