@@ -2,5 +2,5 @@
   <%= for p <- @all_pages, p.group == "main-menu" do %>
     <li><a href="<%= p.url %>"><%= p.label %></a></li>
   <% end %>
-  <li><a href="<%= base "posts" %>">Posts</a></li>
+  <li><a href="<%= base "posts" %>">News</a></li>
 </ul>

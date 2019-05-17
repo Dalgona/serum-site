@@ -5,7 +5,8 @@
   author_email: "dalgona@hontou.moe",
   author: "Dalgona.",
   date_format: "{WDfull}, {D} {Mshort} {YYYY}",
-  list_title_tag: "Posts Tagged \"~s\"",
+  list_title_all: "Serum News",
+  list_title_tag: "Serum News/~s",
   plugins: [
     Serum.Plugins.TableOfContents,
     {Serum.Plugins.LiveReloader, only: :dev}
