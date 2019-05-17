@@ -44,9 +44,9 @@ You can now include this template in other templates, such as
 Note that the argument passed to `include/1` macro is the name of the includable
 template file without `.html.eex` suffix.
 
-<blockquote class="note">
-  <header>NOTE:</header>
-  <p>Includable templates cannot include other includable templates. They can
-  only be included by regular templates located under <code>templates/</code>
-  directory.</p>
-</blockquote>
+> Note
+> {: .title }
+>
+> Includable templates cannot include other templates. They can only be
+> included by templates located under the `templates/` directory.
+{: .note }

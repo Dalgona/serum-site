@@ -73,17 +73,19 @@ publishing it.
 
     Open a web browser and navigate to your website (i.e. `http://localhost`).
 
-    <blockquote class="note">
-      <header>NOTE 1</header>
-      <p>The server will listen on port 8080 if `--port` (or `-p`) option is
-      not specified.</p>
-    </blockquote>
+    > Note 1
+    > {: .title }
+    >
+    > The server will listen on port 8080 if `--port` (or `-p`) option is
+    > not given.
+    {: .note }
 
-    <blockquote class="note">
-      <header>NOTE 2</header>
-      <p>Always type `quit` command instead of pressing <kbd>Ctrl</kbd> +
-      <kbd>C</kbd> to quit the development server.</p>
-    </blockquote>
+    > Note 2
+    > {: .title }
+    >
+    > Always type the `quit` command, instead of pressing <kbd>Ctrl</kbd> +
+    > <kbd>C</kbd>, to quit the development server.
+    {: .note }
 
 Congratulations! Yet it looks empty, you have successfully built your first
 website with Serum. Now continue reading [documentations](%page:docs/index) to
