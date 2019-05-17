@@ -8,17 +8,17 @@ order: 2
 
 ## Requirements
 
-* Elixir 1.7.0 or newer
+* **Elixir 1.7.0 or newer**
 
     Please visit [the official Elixir website](http://elixir-lang.org) for
     installation instructions.
 
-* UNIX-based operating system
+* **UNIX-based operating system or Microsoft Windows**
 
-    Serum has never been tested on the native Windows build of Erlang runtime,
-    so there is no guarantee that Serum will work well on Windows. If you need
-    to work on Microsoft Windows, please install Serum on Windows Subsystem for
-    Linux (WSL), which comes with the latest version of Windows 10.
+    Serum has not been thoroughly tested on Microsoft Windows, but most of
+    functions should work. If you have any issue with Serum on Windows, please
+    open an issue on GitHub. Also, if you are running the latest update of
+    Windows 10, you could try using Serum on Windows Subsystem for Linux (WSL).
 
 * To enable the automatic rebuild feature, you'll need to install an external
   package depending on your operating system.
@@ -81,8 +81,8 @@ publishing it.
 
     <blockquote class="note">
       <header>NOTE 2</header>
-      <p>Always type `quit` command instead of pressing Control-C to quit the
-      development server.</p>
+      <p>Always type `quit` command instead of pressing <kbd>Ctrl</kbd> +
+      <kbd>C</kbd> to quit the development server.</p>
     </blockquote>
 
 Congratulations! Yet it looks empty, you have successfully built your first
