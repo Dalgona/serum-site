@@ -38,7 +38,9 @@ evaluated to a map.
   plugins: [
     Serum.Plugins.TableOfContents,
     {Serum.Plugins.LiveReloader, only: :dev}
-  ]
+  ],
+
+  theme: Serum.Themes.Essence
 }
 ```
 
@@ -129,3 +131,10 @@ evaluated to a map.
     The documentation for [`Serum.Plugin`
     module](https://hexdocs.pm/serum/Serum.Plugin.html) describes what Serum
     plugins are, how to use them, and how to create your own Serum plugin.
+
+- `theme` (atom, optional)
+
+    A theme is a set of predefined templates and assets that helps you quickly
+    setup the look and feel of your website. Read the documentation for
+    [`Serum.Theme` module](https://hexdocs.pm/serum/Serum.Theme.html) to learn
+    more about Serum themes.
