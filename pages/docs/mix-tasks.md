@@ -15,6 +15,7 @@ test, and manage your Serum project.
 <div><serum-toc start="2" end="2"></serum-toc></div>
 
 ## `serum` - Prints all Serum Tasks
+{: #serum }
 
 ```
 $ mix serum
@@ -29,6 +30,7 @@ for example, run `mix help serum.build`.
 - - -
 
 ## `serum.new` - Creates a New Serum Project
+{: #serum.new }
 
 ```
 $ mix serum.new [--force] <PATH>
@@ -63,7 +65,20 @@ files and directories are created during the initialization process.
 
 - - -
 
+## `serum.new.theme` - Creates a New Serum Theme Project
+{: #serum.new.theme }
+
+```
+$ mix serum.new.theme [--force] <PATH>
+```
+
+A new Serum theme project will be created at the given `PATH`. The required
+argument and option are the same as those of [`serum.new`](#serum.new) task.
+
+- - -
+
 ## `serum.build` - Builds the Current Serum Project
+{: #serum.build }
 
 ```
 $ mix serum.build [(-o|--output) PATH]
@@ -87,6 +102,7 @@ control-related data.
 - - -
 
 ## `serum.server` - Starts the Development Server
+{: #serum.server }
 
 ```
 $ mix serum.server [(-p|--port) PORT]
@@ -124,6 +140,7 @@ the server by typing commands. Available commands are:
 - - -
 
 ## `serum.gen.page` - Adds a New Page
+{: #serum.gen.page }
 
 ```
 $ mix serum.gen.page (-t|--title) TITLE (-o|--output) OUTPUT [Options]
@@ -157,6 +174,7 @@ $ mix serum.gen.page (-t|--title) TITLE (-o|--output) OUTPUT [Options]
 - - -
 
 ## `serum.gen.post` - Adds a New Blog Post
+{: #serum.gen.post }
 
 ```
 $ mix serum.gen.post (-t|--title) TITLE (-o|--output) OUTPUT [Options]
