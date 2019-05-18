@@ -1,0 +1,6 @@
+<% {{year, _, _}, _} = :calendar.local_time %>
+<p>
+  Copyright &copy; <%= year %> Eunbin Jeong (Dalgona.)
+  <a href="https://dalgona.github.io">[Website]</a>
+  <a href="https://github.com/Dalgona">[GitHub]</a>
+</p>

@@ -11,5 +11,6 @@
     SerumSite.ReadTime,
     Serum.Plugins.TableOfContents,
     {Serum.Plugins.LiveReloader, only: :dev}
-  ]
+  ],
+  theme: Serum.Themes.Essence
 }
