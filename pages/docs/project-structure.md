@@ -29,6 +29,7 @@ directories and files are created.
 │   ├── <span style="color:#4078c0">js/</span>
 │   └── <span style="color:#4078c0">images/</span>
 ├── <span style="color:#4078c0">media/</span>
+├── <span style="color:#4078c0">files/</span>
 └── <b>mix.exs</b>
 </code>
 </pre>
@@ -80,6 +81,12 @@ Media files are static files which are referenced by a few pages or blog posts,
 such as pictures, video clips, audio files, etc. You may remove this directory
 if none of your pages or blog posts uses media files. Read
 [Assets and Media](%page:docs/asset_media) document for more information.
+
+## `files` Directory
+
+Files or directories in this directory will be copied to the root directory of
+your website after Serum has successfully built your project. This is useful,
+for example, when you need to set favicons for your website.
 
 ## `mix.exs`
 
