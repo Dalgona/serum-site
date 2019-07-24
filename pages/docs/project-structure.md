@@ -11,26 +11,27 @@ order: 2
 When you create a new Serum project by running `mix serum.new`, the following
 directories and files are created.
 
-```
-/path/to/project
-├── serum.exs (or serum.json)
-├── pages/
-│   └── index.md
-├── posts/
-├── templates/
-│   ├── base.html.eex
-│   ├── list.html.eex
-│   ├── page.html.eex
-│   └── post.html.eex
-├── includes/
-│   └── nav.html.eex
-├── assets/
-│   ├── css/
-│   ├── js/
-│   └── images/
-├── media/
-└── mix.exs
-```
+<pre>
+<code><span style="color:#4078c0">/path/to/project/</span>
+├── <b>serum.exs</b>
+├── <span style="color:#4078c0">pages/</span>
+│   └── <b>index.md</b>
+├── <span style="color:#4078c0">posts/</span>
+├── <span style="color:#4078c0">templates/</span>
+│   ├── <b>base.html.eex</b>
+│   ├── <b>list.html.eex</b>
+│   ├── <b>page.html.eex</b>
+│   └── <b>post.html.eex</b>
+├── <span style="color:#4078c0">includes/</span>
+│   └── <b>nav.html.eex</b>
+├── <span style="color:#4078c0">assets/</span>
+│   ├── <span style="color:#4078c0">css/</span>
+│   ├── <span style="color:#4078c0">js/</span>
+│   └── <span style="color:#4078c0">images/</span>
+├── <span style="color:#4078c0">media/</span>
+└── <b>mix.exs</b>
+</code>
+</pre>
 
 ## `serum.exs` (or `serum.json`)
 
