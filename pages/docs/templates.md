@@ -105,7 +105,12 @@ customize its values by editing the
     label: "Home",
     group: "main-menu",
     order: "1",
-    url: "/Serum/index.html"
+    url: "/Serum/index.html",
+    extras: %{
+      "key-1" => "value-1",
+      "key-2" => "value-2",
+      ...
+    }
   },
   ...
 ]
@@ -138,7 +143,12 @@ navigation list or a table of contents.
       %{name: "Tag1", list_url: "/Serum/tags/Tag1/"},
       %{name: "Tag3", list_url: "/Serum/tags/Tag3/"}
     ],
-    url: "/Serum/posts/2019-04-18-my-first-post.html"
+    url: "/Serum/posts/2019-04-18-my-first-post.html",
+    extras: %{
+      "key-1" => "value-1",
+      "key-2" => "value-2",
+      ...
+    }
   },
   ...
 ]
