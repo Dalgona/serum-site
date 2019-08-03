@@ -14,11 +14,11 @@ documentation](https://hexdocs.pm/eex) for more information about EEx.
 
 <div><serum-toc start="2" end="4"></serum-toc></div>
 
-## List of Templates
+## List of Required Templates
 
-These four template files must be present in the `templates/` directory, and
-their names must not be changed. Specifying a custom template for a specific
-page is not supported yet, this feature can be added in the future.
+Unless provided by Serum [themes](https://hexdocs.pm/serum/Serum.Theme.html),
+these four template files must be present in the `templates/` directory, and
+their names must not be changed.
 
 ### `base.html.eex`
 
@@ -38,6 +38,26 @@ This template is used to display the contents and metadata of your blog posts.
 ### `list.html.eex`
 
 This template defines how a list of blog posts is displayed.
+
+## Custom Templates
+
+Since Serum v1.2.0, you can use custom templates for your pages and blog posts.
+Simply add template files with names of your choice, `foo.html.eex` for
+example. Then you can have your pages or blog posts rendered using your custom
+templates by setting `template` property in the page or post header area:
+
+```
+---
+title: Example Page
+label: Example
+group: sample
+order: 3
+template: foo
+---
+
+This page will be rendered using `foo.html.eex` template,
+instead of `page.html.eex`!
+```
 
 ## Variables
 

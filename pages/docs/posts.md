@@ -44,6 +44,10 @@ three post metadata you can define:
 
     Defines one or more tags.
 
+* `template` (string, optional)
+
+    See [Custom Templates](/Serum/docs/templates.html#custom-templates).
+
 Following is an example of a valid source markdown file. Note that Serum doesn't
 care about spaces between a comma and tags.
 

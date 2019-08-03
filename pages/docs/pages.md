@@ -52,6 +52,10 @@ in the form of `<key>: <value>`. Below is the list of metadata you can define:
     number the pages so that pages with lower `order` come first and pages with
     higher `order` come last in the list.
 
+* `template` (string, optional)
+
+    See [Custom Templates](/Serum/docs/templates.html#custom-templates).
+
 Below is an example of a valid page source file.
 
 ```
