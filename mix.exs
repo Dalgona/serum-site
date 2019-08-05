@@ -12,7 +12,7 @@ defmodule SerumSite.MixFile do
 
   defp deps do
     [
-      {:serum, "~> 1.1"}
+      {:serum, "~> 1.2"}
     ]
   end
 end
