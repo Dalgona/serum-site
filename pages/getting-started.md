@@ -8,7 +8,7 @@ order: 2
 
 ## Requirements
 
-* **Elixir 1.7.0 or newer**
+* **Elixir 1.8.0 or newer**
 
     Please visit [the official Elixir website](http://elixir-lang.org) for
     installation instructions.
