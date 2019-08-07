@@ -1,0 +1,9 @@
+<article>
+  <div>
+    <p><a href="<%= page "docs/index" %>">Go back to the index</a></p>
+    <header>
+      <h1><%= @page.title %></h1>
+    </header>
+    <%= @contents %>
+  </div>
+</article>
