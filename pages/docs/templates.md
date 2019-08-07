@@ -2,11 +2,8 @@
 title: Templates
 group: docs
 order: 6
+template: doc
 ---
-
-[Back to the index](%page:docs/index)
-
-# Templates
 
 Serum generates HTML pages by applying templates to your contents. Templates
 are _Embedded Elixir (EEx)_ files. Please read [the official EEx

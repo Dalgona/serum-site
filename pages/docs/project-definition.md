@@ -2,11 +2,8 @@
 title: Project Definition
 group: docs
 order: 3
+template: doc
 ---
-
-[Back to the index](%page:docs/index)
-
-# Project Definition
 
 Every Serum project has a file named `serum.exs` right under the project's
 root directory. This file indicates that the containing directory is a Serum

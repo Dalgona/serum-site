@@ -2,11 +2,8 @@
 title: Serum Plugin Overview
 group: docs-plugin
 order: 1
+template: doc
 ---
-
-[Back to the index](%page:docs/index)
-
-# Serum Plugin Overview
 
 `Serum.Plugin` is a behaviour that all Serum plugin module must implement.
 This behaviour allows experienced Serum users and developers to make their own

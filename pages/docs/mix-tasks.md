@@ -2,11 +2,8 @@
 title: Mix Tasks
 group: docs
 order: 1
+template: doc
 ---
-
-[Back to the index](%page:docs/index)
-
-# Mix Tasks
 
 Once you have installed Serum locally in your project, you now have the access
 to Serum's functionalities through Mix tasks. Use these Mix tasks to build,

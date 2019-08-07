@@ -2,11 +2,8 @@
 title: TOC Generator Plugin
 group: docs-plugin
 order: 2
+template: doc
 ---
-
-[Back to the index](%page:docs/index)
-
-# TOC Generator Plugin
 
 `Serum.Plugins.TableOfContents` is a module for the Serum plugin that inserts a
 table of contents. This plugin is included in the `serum` package, so you don't

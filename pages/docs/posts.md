@@ -2,11 +2,8 @@
 title: Writing Blog Posts
 group: docs
 order: 5
+template: doc
 ---
-
-[Back to the index](%page:docs/index)
-
-# Writing Blog Posts
 
 Serum processes blog posts differently compared to other pages, so that posts
 have additional features such as tagging, list generation, etc.

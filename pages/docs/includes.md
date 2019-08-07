@@ -2,11 +2,8 @@
 title: Includable Templates
 group: docs
 order: 7
+template: doc
 ---
-
-[Back to the index](%page:docs/index)
-
-# Includable Templates
 
 Includable templates are special kind of EEx templates which are compiled and
 rendered as HTML stubs before any other mandatory templates are processed. This

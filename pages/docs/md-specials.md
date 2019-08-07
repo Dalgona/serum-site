@@ -2,11 +2,8 @@
 title: Special Syntax for Markdown
 group: docs
 order: 9
+template: doc
 ---
-
-[Back to the index](%page:docs/index)
-
-# Special Syntax for Markdown
 
 Most of the time you will need to add links to other pages or blog posts
 within your website, or you are going to include some media files to your pages

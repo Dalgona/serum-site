@@ -2,11 +2,8 @@
 title: Assets and Media
 group: docs
 order: 8
+template: doc
 ---
-
-[Back to the index](%page:docs/index)
-
-# Assets and Media
 
 Each Serum project can also have two additional directories: `assets` and
 `media`. The assets directory is used for storing stylesheets, javascript

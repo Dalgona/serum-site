@@ -2,11 +2,8 @@
 title: Live Reloader Plugin
 group: docs-plugin
 order: 4
+template: doc
 ---
-
-[Back to the index](%page:docs/index)
-
-# Live Reloader Plugin
 
 This plugin injects the live reloader script at the end of generated HTML
 files. This plugin is included in the `serum` package, so you don't need to

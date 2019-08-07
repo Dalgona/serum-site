@@ -2,11 +2,8 @@
 title: Sitemap Generator Plugin
 group: docs-plugin
 order: 3
+template: doc
 ---
-
-[Back to the index](%page:docs/index)
-
-# Sitemap Generator Plugin
 
 Use `Serum.Plugins.SitemapGenerator` Plugin to have a `sitemap.xml` and the
 corresponding `robots.txt` generated. These files can later be used to help

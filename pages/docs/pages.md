@@ -2,11 +2,8 @@
 title: Adding Pages to Your Website
 group: docs
 order: 4
+template: doc
 ---
-
-[Back to the index](%page:docs/index)
-
-# Adding Pages to Your Website
 
 All source codes for your pages should be located under `pages/` directory.
 Serum scans this directory and its subdirectories recursively, so you may have

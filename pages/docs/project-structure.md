@@ -2,11 +2,8 @@
 title: Project Structure
 group: docs
 order: 2
+template: doc
 ---
-
-[Back to the index](%page:docs/index)
-
-# Project Structure
 
 When you create a new Serum project by running `mix serum.new`, the following
 directories and files are created.
