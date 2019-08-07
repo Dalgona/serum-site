@@ -1,8 +1,14 @@
 <article>
   <div>
     <p><a href="<%= page "docs/index" %>">Go back to the index</a></p>
+    <%
+    read_time = @page.extras["read_time"]
+    minutes = if read_time === 1, do: "minute", else: "minutes"
+    %>
     <header>
       <h1><%= @page.title %></h1>
+      <p>About <%= read_time %> <%= minutes %> to read</p>
+      <hr>
     </header>
     <%= @contents %>
   </div>

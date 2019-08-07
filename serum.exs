@@ -8,6 +8,7 @@
   list_title_all: "Serum News",
   list_title_tag: "Serum News/~s",
   plugins: [
+    SerumSite.ReadTime,
     Serum.Plugins.TableOfContents,
     {Serum.Plugins.LiveReloader, only: :dev}
   ]
