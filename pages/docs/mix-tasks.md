@@ -133,7 +133,7 @@ the server by typing commands. Available commands are:
   > Please make sure you type the `quit` command to stop the development
   > server. Pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> causes unclean exit,
   > leaving the temporary directory not removed.
-  {: .note }
+    {: .note }
 
 - - -
 
