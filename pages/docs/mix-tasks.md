@@ -127,13 +127,13 @@ the server by typing commands. Available commands are:
     You can also send EOF to stop the server, by pressing <kbd>Ctrl</kbd> +
     <kbd>D</kbd> on UNIX-based systems.
 
-    > Note
-    > {: .title }
-    >
-    > Please make sure you type the `quit` command to stop the development
-    > server. Pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> causes unclean exit,
-    > leaving the temporary directory not removed.
-    {: .note }
+  > Note
+  > {: .title }
+  >
+  > Please make sure you type the `quit` command to stop the development
+  > server. Pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> causes unclean exit,
+  > leaving the temporary directory not removed.
+  {: .note }
 
 - - -
 
