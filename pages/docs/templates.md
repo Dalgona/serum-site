@@ -301,13 +301,13 @@ Returns the URL of the given asset.
 
 ### `include/1`
 
-Includes the given template saved in `includes/` directory. See [Includable
-Templates](%page:docs/includes) for more information about including templates.
+Includes the given template saved in `includes/` directory. See
+[Includes](%page:docs/includes) for more information about including templates.
 
 Actually this macro is not defined in the `Serum.Template.Helpers` module.
 The Serum template processor traverses the compiled template code (which is an
-Elixir AST), and directly expands the call to this macro into the corresponding
-includable template.
+Elixir AST), and directly expands the call to this macro into the actual
+contents of the included template.
 
 ```lang-html
 <!-- includes/nav.html.eex -->

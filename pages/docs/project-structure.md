@@ -60,10 +60,10 @@ must define. [Templates](%page:docs/templates) document describes each of them.
 
 ## `includes` Directory
 
-Includable templates ("includes") are a special kind of templates which can be
-included in regular templates or pages in `.html.eex` format.
-Read [Includable Templates](%page:docs/includes) document to learn more. You
-can remove this directory if you don't need to use any includable templates.
+Includes are a special kind of templates which can be included in other
+templates, includes, or pages in `.html.eex` format. Read
+[Includes](%page:docs/includes) document to learn more. You can remove this
+directory if your project does not have any include files.
 
 ## `assets` Directory
 
