@@ -1,22 +1,22 @@
 ---
-title: Includable Templates
+title: Includes
 group: docs
 order: 7
 template: doc
 ---
 
-Includable templates are special kind of EEx templates which are compiled and
-rendered as HTML stubs before any other mandatory templates are processed. This
-document explains how to create and use includes in your Serum project.
+Includes are special kind of EEx templates which can be included into other
+templates or includes. This document explains how to create and use includes in
+your Serum projects.
 
-## Creating a new includable template
+## Creating a new include file
 
-All includable template should be saved under `includes/` directory, and its
-format is almost the same as regular template's. For example, if you want to
-create an includable template for the navigation area of your website, you can
-name the template `includes/nav.html.eex`, and its content would look like this:
+All includes should be saved under `includes/` directory, and its format is
+almost the same as regular template's. For example, if you want to create an
+include file for the navigation area of your website, you can name the template
+`includes/nav.html.eex`, and its content would look like this:
 
-```
+```lang-html
 <nav>
   <ul>
     <li><a href="<%= base() %>">Home</a>
@@ -26,10 +26,14 @@ name the template `includes/nav.html.eex`, and its content would look like this:
 </nav>
 ```
 
-You can now include this template in other templates, such as
-`templates/base.html.eex`, by using `include/1` template helper macro.
+## Including contents
 
-```
+You can now include this template in other templates, such as
+`templates/base.html.eex`, by using `include/1` template helper macro. Calls to
+the `include/1` macro will be expanded into actual contents when the calling
+template or include is being compiled.
+
+```lang-html
 <html>
   ...
   <body>
@@ -38,12 +42,40 @@ You can now include this template in other templates, such as
 </html>
 ```
 
-Note that the argument passed to `include/1` macro is the name of the includable
-template file without `.html.eex` suffix.
+Note that the argument passed to `include/1` macro is the name of the include
+file without `.html.eex` extension.
 
-> Note
-> {: .title }
->
-> Includable templates cannot include other templates. They can only be
-> included by templates located under the `templates/` directory.
-{: .note }
+### Limitations of `include/1`
+
+Due to the nature of the compile-time include expansion, self or cyclic
+inclusion is intentionally not allowed. That is, these following files will
+fail to compile:
+
+```lang-html
+includes/self-include.html.eex:
+
+<div>
+  <!-- Self inclusion -->
+  <%= include "self-include" %>
+</div>
+```
+
+```lang-html
+includes/cycle-1.html.eex:
+
+<div class="depth-1">
+  <%= include "cycle-2" %>
+</div>
+```
+
+```lang-html
+includes/cycle-2.html.eex:
+
+<div class="depth-2">
+  <!-- Cyclic inclusion -->
+  <%= include "cycle-1" %>
+</div>
+```
+
+These includes won't cause infinite loops though, because Serum will abort the
+build when such cycles are detected.
