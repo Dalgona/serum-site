@@ -30,7 +30,7 @@ evaluated to a map.
   list_title_tag: "Posts Tagged \"~s\"",
   pagination: true,
   posts_per_page: 10,
-  preview_length: 200,
+  preview_length: {:chars, 200},
 
   plugins: [
     Serum.Plugins.TableOfContents,
@@ -109,14 +109,36 @@ evaluated to a map.
     Default values of `pagination` and `posts_per_page` are `false` and `5`,
     respectively.
 
-* `preview_length` (integer, optional)
+* `preview_length` (2-tuple or integer, optional)
 
-    A non-negative integer which sets the maximum number of characters in the
-    preview text of each blog post. Defaults to `200`.
+    A value which sets the maximum number of characters in the preview text of
+    each blog post. Defaults to `200`.
 
-    It is recommended to explicitly set this property to zero if you are not
-    going to use preview texts, as by doing so some unnecessary HTML processing
-    can be skipped.
+    You may set the value in the following formats. Any invalid values will
+    result in empty preview texts.
+
+    <pre class="lang-elixir"><code>number
+&#35; Or
+&#123;:chars, number}</code></pre>
+
+    Maximum number of characters in a preview text.
+
+    <pre class="lang-elixir"><code>&#123;:words, number}</code></pre>
+
+    Maximum number of words in a preview text.
+
+    <pre class="lang-elixir"><code>&#123;:paragraphs, number}</code></pre>
+
+    Maximum number of paragraphs in a preview text. Serum counts the number of
+    `<p>` tags in a generated HTML content.
+
+  > Note
+  > {: .title}
+  >
+  > It is recommended to explicitly set this property to zero if you are not
+  > going to use preview texts, as by doing so some unnecessary HTML
+  > processing can be skipped.
+    {: .note}
 
 ### Miscellaneous
 
