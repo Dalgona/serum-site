@@ -40,7 +40,7 @@ not exist), and put names of Serum plugin modules there.
 ```lang-elixir
 %{
   plugins: [
-    Awesome.Serum.Plugin,
+    {Awesome.Serum.Plugin, args: [awesome: true]},
     Great.Serum.Plugin
   ]
 }
