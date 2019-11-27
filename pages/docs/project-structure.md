@@ -35,7 +35,7 @@ directories and files are created.
 
 This file indicates that the containing directory is a Serum project. And it
 contains various metadata and options which are used while Serum builds the
-project. See [Project Definition](%page:docs/project_definition) document for
+project. See [Project Definition](%page:docs/project-definition) document for
 more information.
 
 ## `pages` Directory
@@ -70,14 +70,14 @@ directory if your project does not have any include files.
 Assets are static files which are used throughout the website, such as
 stylesheets, JavaScript files, background images, and so on. You may remove
 this directory if your website is supposed to have no assets at all. Read
-[Assets and Media](%page:docs/asset_media) document for more information.
+[Assets and Media](%page:docs/assets-media) document for more information.
 
 ## `media` Directory
 
 Media files are static files which are referenced by a few pages or blog posts,
 such as pictures, video clips, audio files, etc. You may remove this directory
 if none of your pages or blog posts uses media files. Read
-[Assets and Media](%page:docs/asset_media) document for more information.
+[Assets and Media](%page:docs/assets-media) document for more information.
 
 ## `files` Directory
 

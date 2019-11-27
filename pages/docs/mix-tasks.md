@@ -53,7 +53,7 @@ This Mix task is not part of Serum; it's provided by `serum_new` package, which
 is usually installed in your home directory, to make the task accessible from
 anywhere.
 
-Read [Project Structure](%page:docs/project_structure) document to see which
+Read [Project Structure](%page:docs/project-structure) document to see which
 files and directories are created during the initialization process.
 
 ### Required Argument
