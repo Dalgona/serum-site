@@ -117,7 +117,7 @@ customize its values by editing the
 <!-- Usage in EEx -->
 <ul>
   <%= for page <- @all_pages, page.group === "main-menu" do %>
-    <li><a href="page.url" title="<%= page.title %>"><%= page.label %></a></li>
+    <li><a href="<%= page.url %>" title="<%= page.title %>"><%= page.label %></a></li>
   <% end %>
 </ul>
 ```
