@@ -9,6 +9,15 @@ Once you have installed Serum locally in your project, you now have the access
 to Serum's functionalities through Mix tasks. Use these Mix tasks to build,
 test, and manage your Serum project.
 
+> NOTE
+> {: .title }
+>
+> All Mix tasks described below may output texts with colors, using ANSI escape
+> sequences, when the standard output is directly connected to a terminal. Use
+> the `--color` option to let Serum always print colored texts. If you don't
+> want colored outputs, use the `--no-color` option instead.
+{: .note }
+
 <div><serum-toc start="2" end="2"></serum-toc></div>
 
 ## `serum` - Prints all Serum Tasks
