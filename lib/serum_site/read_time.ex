@@ -23,13 +23,13 @@ defmodule SerumSite.ReadTime do
   @impl true
   def implements do
     [
-      :processed_pages,
-      :processed_posts
+      processed_pages: 2,
+      processed_posts: 2
     ]
   end
 
   @impl true
-  def processed_pages(pages) do
+  def processed_pages(pages, _args) do
     new_pages =
       Enum.map(pages, fn %{data: html, extras: extras} = page ->
         %{page | extras: Map.put(extras, "read_time", read_time(html))}
@@ -39,7 +39,7 @@ defmodule SerumSite.ReadTime do
   end
 
   @impl true
-  def processed_posts(posts) do
+  def processed_posts(posts, _args) do
     new_posts =
       Enum.map(posts, fn %{html: html, extras: extras} = post ->
         %{post | extras: Map.put(extras, "read_time", read_time(html))}
