@@ -7,6 +7,7 @@
   date_format: "{WDfull}, {D} {Mshort} {YYYY}",
   list_title_all: "Serum News",
   list_title_tag: "Serum News/~s",
+  preview_length: {:paragraphs, 1},
   plugins: [
     SerumSite.ReadTime,
     Serum.Plugins.TableOfContents,
