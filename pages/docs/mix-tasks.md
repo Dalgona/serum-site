@@ -131,6 +131,9 @@ the server by typing commands. Available commands are:
 
 * `build` - Rebuilds current project.
 
+* `open` - Opens the website in the default web browser of your desktop
+  environment. This command may not work properly on some rare systems.
+
 * `quit` - Stops the development server and quit.
 
     You can also send EOF to stop the server, by pressing <kbd>Ctrl</kbd> +
@@ -142,7 +145,7 @@ the server by typing commands. Available commands are:
   > Please make sure you type the `quit` command to stop the development
   > server. Pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> causes unclean exit,
   > leaving the temporary directory not removed.
-    {: .note }
+  {: .note }
 
 - - -
 
