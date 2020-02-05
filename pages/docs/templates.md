@@ -177,7 +177,7 @@ The `@all_posts` variable contains a list of all blog posts, sorted by
 
 ```lang-html
 <!-- Usage in EEx -->
-<%= for {tag, count} <- @all_tags do>
+<%= for {tag, count} <- @all_tags do %>
   <a href="<%= tag.list_url %>">
     <%= tag.name %> <span class="count"><%= count %></span>
   </a>
