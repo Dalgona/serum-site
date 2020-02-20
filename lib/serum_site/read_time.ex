@@ -58,6 +58,7 @@ defmodule SerumSite.ReadTime do
 
   defp word_count(html) do
     html
+    |> Floki.parse_document!()
     |> Floki.text(sep: " ")
     |> String.split(~r/\s+/, trim: true)
     |> length
