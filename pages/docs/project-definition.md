@@ -138,7 +138,7 @@ evaluated to a map.
   > It is recommended to explicitly set this property to zero if you are not
   > going to use preview texts, as by doing so some unnecessary HTML
   > processing can be skipped.
-    {: .note}
+  {: .note}
 
 ### Miscellaneous
 
