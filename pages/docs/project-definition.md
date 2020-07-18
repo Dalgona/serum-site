@@ -25,6 +25,9 @@ evaluated to a map.
   base_url: "/~john/sample/",
   server_root: "https://example.com",
 
+  posts_source: "posts",
+  posts_path: "blog",
+  tags_path: "blog/tags",
   date_format: "{D} {Mshort} {YYYY}",
   list_title_all: "All Posts",
   list_title_tag: "Posts Tagged \"~s\"",
@@ -76,6 +79,22 @@ evaluated to a map.
 
 ### Blog Configuration
 
+* `posts_source` (string, optional)
+
+    Path to a directory which holds source files for your blog posts.
+    Defaults to `"posts"`.
+
+* `posts_path` (string, optional)
+
+    Path in a output directory which your rendered blog posts will be written
+    to. Defaults to the value of `:posts_source`. (i.e. the default value will
+    be `"posts"` if the value of `:posts_source` is not explicitly given.)
+
+* `tags_path` (string, optional)
+
+    Path in an output directory which the tag pages will be written to.
+    Defaults to `"tags"`.
+
 * `date_format` (string, optional)
 
     Determines how the date and time should be represented in blog posts and
@@ -111,6 +130,14 @@ evaluated to a map.
 
 * `preview_length` (2-tuple or integer, optional)
 
+    > Note (soft-deprecated)
+    > {: .title}
+    >
+    > It is recommended to use the new [Preview Text Generator
+    > Plugin](%page:docs/plugin/preview), which was introduced in Serum v1.5.0
+    > and is more powerful than using this built-in feature.
+    {: .note}
+
     A value which sets the maximum number of characters in the preview text of
     each blog post. Defaults to `200`.
 
@@ -132,13 +159,13 @@ evaluated to a map.
     Maximum number of paragraphs in a preview text. Serum counts the number of
     `<p>` tags in a generated HTML content.
 
-  > Note
-  > {: .title}
-  >
-  > It is recommended to explicitly set this property to zero if you are not
-  > going to use preview texts, as by doing so some unnecessary HTML
-  > processing can be skipped.
-  {: .note}
+    > Note
+    > {: .title}
+    >
+    > It is recommended to explicitly set this property to zero if you are not
+    > going to use preview texts, as by doing so some unnecessary HTML
+    > processing can be skipped.
+    {: .note}
 
 ### Miscellaneous
 
