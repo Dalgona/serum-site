@@ -12,7 +12,7 @@ defmodule SerumSite.MixFile do
 
   defp deps do
     [
-      {:serum, "1.4.1"},
+      {:serum, "1.5.0"},
       {:serum_theme_essence, "~> 1.1"},
       {:gettext, "0.17.1"}
     ]
